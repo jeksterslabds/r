@@ -3,7 +3,7 @@
 #' author: "Ivan Jacob Agaloos Pesigan"
 #' date: "`r Sys.Date()`"
 #' output:
-#'   rmarkdown::html_vignette:
+#'   rmarkdown::github_document:
 #'     toc: true
 #' ---
 #'
@@ -42,8 +42,9 @@ cat(libpath)
 #+ pkgpath
 pkg <- c(
   "jeksterslabRutils",
-  "jeksterslabRlib",
-  "jeksterslabRdoc"
+  "jeksterslabRpkg"
+  #  "jeksterslabRlib",
+  #  "jeksterslabRdoc"
 )
 pkgpath <- file.path(
   Sys.getenv("HOME"),
@@ -60,7 +61,9 @@ suppressMessages(
     lapply(
       X = c(
         "styler",
-        "devtools"
+        "devtools",
+        "jeksterslabRutils",
+        "jeksterslabRpkg"
       ),
       FUN = require,
       lib.loc = libpath,
@@ -73,26 +76,29 @@ suppressMessages(
 #' ## Recursively style all packages and scripts in `{HOME}/scripts/r`
 #'
 #+ style, results="hide"
-style_dir(
-  file.path(
-    Sys.getenv("HOME"),
-    "scripts",
-    "r"
-  )
+dir <- file.path(
+  Sys.getenv("HOME"),
+  "scripts",
+  "r"
+)
+jeksterslabRutils::util_style(
+  dir = dir,
+  par = TRUE
 )
 #'
 #' ## Check and install packages
 #'
 #+ install, results="hide"
 exe <- function(pkgpath) {
-  check(pkgpath)
-  install(
-    pkgpath,
-    args = paste(
-      "-l",
-      shQuote(libpath)
-    )
-  )
+  pkg_build(pkg_dir = pkgpath)
+  #  check(pkgpath)
+  #  install(
+  #    pkgpath,
+  #    args = paste(
+  #      "-l",
+  #      shQuote(libpath)
+  #    )
+  #  )
 }
 invisible(
   lapply(

@@ -3,7 +3,7 @@
 #' author: "Ivan Jacob Agaloos Pesigan"
 #' date: "`r Sys.Date()`"
 #' output:
-#'   rmarkdown::html_vignette:
+#'   rmarkdown::github_document:
 #'     toc: true
 #' ---
 #'
@@ -161,7 +161,9 @@ packages <- list(
 )
 github <- c(
   # continuous integration
-  "ropenscilabs/travis"
+  "ropenscilabs/travis",
+  "jeksterslabds/jeksterslabRutils",
+  "jeksterslabds/jeksterslabRpkg"
 )
 update.packages(
   ask = FALSE,
