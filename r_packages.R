@@ -188,14 +188,3 @@ suppressMessages(
   )
 )
 install_github(github)
-if (jeksterslab) {
-  source(
-    file.path(
-      Sys.getenv("HOME"),
-      "scripts",
-      "r",
-      "jeksterslab.R"
-    ),
-    echo = TRUE
-  )
-}

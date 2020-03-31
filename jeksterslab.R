@@ -33,7 +33,7 @@ libpath <- file.path(
   ),
   version
 )
-cat(libpath)
+cat(libpath, "\n")
 #'
 #' ## Set Package Path
 #'
@@ -42,9 +42,9 @@ cat(libpath)
 #+ pkgpath
 pkg <- c(
   "jeksterslabRutils",
-  "jeksterslabRpkg"
-  #  "jeksterslabRlib",
-  #  "jeksterslabRdoc"
+  "jeksterslabRpkg",
+  "jeksterslabRlib",
+  "jeksterslabRdoc"
 )
 pkgpath <- file.path(
   Sys.getenv("HOME"),
@@ -61,9 +61,7 @@ suppressMessages(
     lapply(
       X = c(
         "styler",
-        "devtools",
-        "jeksterslabRutils",
-        "jeksterslabRpkg"
+        "devtools"
       ),
       FUN = require,
       lib.loc = libpath,
@@ -81,24 +79,21 @@ dir <- file.path(
   "scripts",
   "r"
 )
-jeksterslabRutils::util_style(
-  dir = dir,
-  par = TRUE
-)
+style_dir(dir)
 #'
 #' ## Check and install packages
 #'
 #+ install, results="hide"
 exe <- function(pkgpath) {
-  pkg_build(pkg_dir = pkgpath)
-  #  check(pkgpath)
-  #  install(
-  #    pkgpath,
-  #    args = paste(
-  #      "-l",
-  #      shQuote(libpath)
-  #    )
-  #  )
+  # pkg_build(pkg_root = pkgpath)
+  check(pkgpath)
+  install(
+    pkgpath,
+    args = paste(
+      "-l",
+      shQuote(libpath)
+    )
+  )
 }
 invisible(
   lapply(
