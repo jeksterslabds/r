@@ -4,3 +4,4 @@ all :
 	(cd jeksterslabRpkg && make)
 	(cd jeksterslabRutils && make)
 	(cd jeksterslabRlib && make)
+	(cd build_boilerplatePackage && make)
