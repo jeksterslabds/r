@@ -159,12 +159,14 @@ packages <- list(
   # python
   "reticulate"
 )
-github <- c(
-  # continuous integration
-  "ropenscilabs/travis",
-  "jeksterslabds/jeksterslabRutils",
-  "jeksterslabds/jeksterslabRpkg"
-)
+# github <- c(
+#  # continuous integration
+#  "ropenscilabs/travis",
+#  # personal packages
+#  "jeksterslabds/jeksterslabRutils",
+#  "jeksterslabds/jeksterslabRpkg",
+#  "jeksterslabds/jeksterslabRlib"
+# )
 update.packages(
   ask = FALSE,
   lib = libpath,
@@ -187,4 +189,4 @@ suppressMessages(
     lib.loc = libpath
   )
 )
-install_github(github)
+# install_github(github)
