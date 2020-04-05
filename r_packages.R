@@ -186,10 +186,10 @@ invisible(
     type = "source"
   )
 )
-suppressMessages(
-  library(
-    devtools,
-    lib.loc = libpath
-  )
-)
+#suppressMessages(
+#  library(
+#    devtools,
+#    lib.loc = libpath
+#  )
+#)
 # install_github(github)
