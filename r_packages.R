@@ -109,7 +109,7 @@ writeLines(
 #' ## Update and install packages
 #'
 #+ install, results="hide"
-packages <- list(
+packages <- c(
   # distribution
   "extraDistr",
   # package development tools
@@ -159,6 +159,9 @@ packages <- list(
   # python
   "reticulate"
 )
+if (is.vector(packages)) {
+  packages <- as.list(packages)
+}
 # github <- c(
 #  # continuous integration
 #  "ropenscilabs/travis",
