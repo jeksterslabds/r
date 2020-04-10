@@ -122,8 +122,10 @@ packages <- c(
   "qpdf",
   "usethis",
   "pkgdown",
-  # internet
+  # serialization
+  "yaml",
   "rjson",
+  # http request
   "curl",
   # benchmark
   "microbenchmark",
@@ -186,10 +188,10 @@ invisible(
     type = "source"
   )
 )
-#suppressMessages(
+# suppressMessages(
 #  library(
 #    devtools,
 #    lib.loc = libpath
 #  )
-#)
+# )
 # install_github(github)
