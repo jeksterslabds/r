@@ -20,6 +20,14 @@
 #' the script appends the environment variable `R_LIBS_USER={HOME}/R/{PLATFORM}-library/{R.VERSION}`.
 #' If it does not, the script creates it and appends the environment variable.
 #'
+<<<<<<< HEAD
+=======
+#' ## Option to install Jeksterslab R packages in `{HOME}/scripts/r`
+#'
+#+ jeksterslab
+jeksterslab <- TRUE
+#'
+>>>>>>> 13901dd7bb3e39b8273a07fae7b7cd780f7c53ed
 #' ## Set the Library Path
 #'
 #' The library path is set to `{HOME}/R/{PLATFORM}-library/{R.VERSION}`
@@ -54,7 +62,11 @@ if (!dir.exists(libpath)) {
 }
 .libPaths(
   c(
+<<<<<<< HEAD
     libpath,
+=======
+    "libpath",
+>>>>>>> 13901dd7bb3e39b8273a07fae7b7cd780f7c53ed
     .libPaths()
   )
 )
@@ -159,12 +171,23 @@ packages <- c(
 if (is.vector(packages)) {
   packages <- as.list(packages)
 }
+<<<<<<< HEAD
 github <- c(
   # personal packages
   "jeksterslabds/jeksterslabRutils",
   "jeksterslabds/jeksterslabRpkg",
   "jeksterslabds/jeksterslabRlib"
 )
+=======
+# github <- c(
+#  # continuous integration
+#  "ropenscilabs/travis",
+#  # personal packages
+#  "jeksterslabds/jeksterslabRutils",
+#  "jeksterslabds/jeksterslabRpkg",
+#  "jeksterslabds/jeksterslabRlib"
+# )
+>>>>>>> 13901dd7bb3e39b8273a07fae7b7cd780f7c53ed
 update.packages(
   ask = FALSE,
   lib = libpath,
@@ -181,6 +204,7 @@ invisible(
     type = "source"
   )
 )
+<<<<<<< HEAD
 suppressMessages(
   library(
     devtools,
@@ -191,3 +215,12 @@ install_github(
   github,
   ref = "master"
 )
+=======
+# suppressMessages(
+#  library(
+#    devtools,
+#    lib.loc = libpath
+#  )
+# )
+# install_github(github)
+>>>>>>> 13901dd7bb3e39b8273a07fae7b7cd780f7c53ed
