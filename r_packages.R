@@ -14,6 +14,11 @@ term_user_lib()
 #'
 #+ r_packages
 repos <- "https://cran.rstudio.org"
+update.packages(
+  ask = FALSE,
+  lib.loc = .libPaths()[1],
+  repos = repos
+)
 if (!require("devtools")) {
   install.packages(
     "devtools",
