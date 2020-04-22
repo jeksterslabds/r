@@ -3,6 +3,7 @@
 all :
 	Rscript r_packages.R
 	Rscript -e 'styler::style_dir()'
+	(cd build_jeksterslabRterm && make)
 	(cd jeksterslabRpkg && make)
 	(cd jeksterslabRterm && make)
 	(cd jeksterslabRutils && make)
@@ -12,8 +13,8 @@ all :
 clean :
 	Rscript r_packages.R
 	Rscript -e 'styler::style_dir()'
-	(cd jeksterslabRpkg && make clean)
-	(cd jeksterslabRterm && make)
-	(cd jeksterslabRutils && make clean)
-	(cd jeksterslabRlib && make clean)
-	(cd build_boilerplatePackage && make clean)
+	-(cd jeksterslabRpkg && make clean)
+	-(cd jeksterslabRterm && make)
+	-(cd jeksterslabRutils && make clean)
+	-(cd jeksterslabRlib && make clean)
+	-(cd build_boilerplatePackage && make clean)
