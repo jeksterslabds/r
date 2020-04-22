@@ -3,9 +3,10 @@
 all :
 	Rscript r_packages.R
 	Rscript -e 'styler::style_dir()'
-	git add -A
-	git commit -m "BUILD."
-	git push
+	-git init
+	-git add -A
+	-git commit -m "BUILD."
+	-git push
 	(cd build_jeksterslabRterm && make)
 	(cd jeksterslabRpkg && make)
 	(cd jeksterslabRterm && make)
