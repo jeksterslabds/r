@@ -1,4 +1,4 @@
-.PHONY: all clean
+.PHONY: all clean packages
 
 all :
 	Rscript r_packages.R
@@ -22,3 +22,6 @@ clean :
 	-(cd jeksterslabRutils && make clean)
 	-(cd jeksterslabRlib && make clean)
 	-(cd build_boilerplatePackage && make clean)
+
+packages :
+	Rscript r_packages.R
