@@ -25,4 +25,5 @@ clean :
 	-(cd build_boilerplatePackage && make clean)
 
 packages :
+	(cd build_jeksterslabRterm && make)
 	Rscript r_packages.R
