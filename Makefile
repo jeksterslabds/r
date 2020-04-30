@@ -1,13 +1,13 @@
 .PHONY: all clean packages
 
 all :
+	(cd build_jeksterslabRterm && make)
 	Rscript r_packages.R
 	Rscript -e 'styler::style_dir()'
 	-git init
 	-git add -A
 	-git commit -m "BUILD."
 	-git push
-	(cd build_jeksterslabRterm && make)
 	(cd jeksterslabRpkg && make)
 	(cd jeksterslabRterm && make)
 	(cd jeksterslabRutils && make)
@@ -15,6 +15,7 @@ all :
 	(cd build_boilerplatePackage && make)
 
 clean :
+	(cd build_jeksterslabRterm && make)
 	Rscript r_packages.R
 	Rscript -e 'styler::style_dir()'
 	-(cd jeksterslabRpkg && make clean)

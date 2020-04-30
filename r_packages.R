@@ -8,17 +8,12 @@
 #' ---
 #'
 #+ user_lib
-source("https://raw.githubusercontent.com/jeksterslabds/jeksterslabRterm/master/R/util_txt2file.R")
+source("https://raw.githubusercontent.com/jeksterslabds/jeksterslabRutils/master/R/util_txt2file.R")
 source("https://raw.githubusercontent.com/jeksterslabds/jeksterslabRterm/master/R/term_user_lib.R")
 term_user_lib()
 #'
 #+ r_packages
 repos <- "https://cran.rstudio.org"
-update.packages(
-  ask = FALSE,
-  lib.loc = .libPaths()[1],
-  repos = repos
-)
 if (!require("devtools")) {
   install.packages(
     "devtools",
@@ -28,6 +23,12 @@ if (!require("devtools")) {
 if (!require("styler")) {
   install.packages(
     "styler",
+    repos = repos
+  )
+}
+if (!require("rmarkdown")) {
+  install.packages(
+    "rmarkdown",
     repos = repos
   )
 }
