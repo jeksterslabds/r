@@ -1,0 +1,1217 @@
+(cd build_jeksterslabRterm && make)
+make[1]: Entering directory '/media/jeksterslab/scripts/r/build_jeksterslabRterm'
+Rscript "01_dependencies.R"
+Library path: /home/jek/R/x86_64-pc-linux-gnu-library/4.0 
+     checking for file ‘/tmp/Rtmp5jnXiF/remotes6373e3b45905d/jeksterslabds-jeksterslabRterm-a12a1d8/DESCRIPTION’ ...  ✔  checking for file ‘/tmp/Rtmp5jnXiF/remotes6373e3b45905d/jeksterslabds-jeksterslabRterm-a12a1d8/DESCRIPTION’
+  ─  preparing ‘jeksterslabRterm’:
+     checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
+  ─  checking for LF line-endings in source and make files and shell scripts
+  ─  checking for empty or unneeded directories
+  ─  building ‘jeksterslabRterm_0.9.0.tar.gz’
+     
+Rscript -e 'rmarkdown::render("01_dependencies.R")'
+  |                                                                              |                                                                      |   0%  |                                                                              |............                                                          |  17%
+   inline R code fragments
+
+  |                                                                              |.......................                                               |  33%
+label: user_lib
+  |                                                                              |...................................                                   |  50%
+  ordinary text without R code
+
+  |                                                                              |...............................................                       |  67%
+label: r_packages
+  |                                                                              |..........................................................            |  83%
+label: install_terminal_tools
+:: Synchronizing package databases...
+ core is up to date
+ extra is up to date
+ community is up to date
+ multilib is up to date
+:: Starting full system upgrade...
+ there is nothing to do
+  |                                                                              |......................................................................| 100%
+  ordinary text without R code
+
+
+/usr/bin/pandoc +RTS -K512m -RTS 01_dependencies.utf8.md --to gfm --from markdown+autolink_bare_uris+tex_math_single_backslash --output 01_dependencies.md --standalone --table-of-contents --toc-depth 3 --template /home/jek/R/x86_64-pc-linux-gnu-library/4.0/rmarkdown/rmarkdown/templates/github_document/resources/default.md 
+/usr/bin/pandoc +RTS -K512m -RTS 01_dependencies.md --to html4 --from gfm --output 01_dependencies.html --standalone --self-contained --highlight-style pygments --template /home/jek/R/x86_64-pc-linux-gnu-library/4.0/rmarkdown/rmarkdown/templates/github_document/resources/preview.html --variable 'github-markdown-css:/home/jek/R/x86_64-pc-linux-gnu-library/4.0/rmarkdown/rmarkdown/templates/github_document/resources/github.css' --email-obfuscation none --metadata pagetitle=PREVIEW 
+Rscript -e 'rmarkdown::render("02_deploy.R")'
+  |                                                                              |                                                                      |   0%  |                                                                              |.....                                                                 |   7%
+   inline R code fragments
+
+  |                                                                              |.........                                                             |  13%
+label: setup
+  |                                                                              |..............                                                        |  20%
+  ordinary text without R code
+
+  |                                                                              |...................                                                   |  27%
+label: git
+  |                                                                              |.......................                                               |  33%
+  ordinary text without R code
+
+  |                                                                              |............................                                          |  40%
+label: rprofile
+  |                                                                              |.................................                                     |  47%
+  ordinary text without R code
+
+  |                                                                              |.....................................                                 |  53%
+label: renviron
+  |                                                                              |..........................................                            |  60%
+  ordinary text without R code
+
+  |                                                                              |...............................................                       |  67%
+label: bash
+  |                                                                              |...................................................                   |  73%
+  ordinary text without R code
+
+  |                                                                              |........................................................              |  80%
+label: xterm
+  |                                                                              |.............................................................         |  87%
+  ordinary text without R code
+
+  |                                                                              |.................................................................     |  93%
+label: vim
+[?1049h[22;0;0t[>4;2m[?1h=[?2004h[1;72r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[72;1H[?2004l[23;2t[23;1t[?2004l[?1l>[>4;m[?1049l[23;0;0t[?1049h[22;0;0t[>4;2m[?1h=[?2004h[1;72r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[72;1H[?2004l[23;2t[23;1t[?2004l[?1l>[>4;m[?1049l[23;0;0t[?1049h[22;0;0t[>4;2m[?1h=[?2004h[1;72r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[72;1H[?2004l[23;2t[23;1t[?2004l[?1l>[>4;m[?1049l[23;0;0t  |                                                                              |......................................................................| 100%
+  ordinary text without R code
+
+
+/usr/bin/pandoc +RTS -K512m -RTS 02_deploy.utf8.md --to gfm --from markdown+autolink_bare_uris+tex_math_single_backslash --output 02_deploy.md --standalone --table-of-contents --toc-depth 3 --template /home/jek/R/x86_64-pc-linux-gnu-library/4.0/rmarkdown/rmarkdown/templates/github_document/resources/default.md 
+/usr/bin/pandoc +RTS -K512m -RTS 02_deploy.md --to html4 --from gfm --output 02_deploy.html --standalone --self-contained --highlight-style pygments --template /home/jek/R/x86_64-pc-linux-gnu-library/4.0/rmarkdown/rmarkdown/templates/github_document/resources/preview.html --variable 'github-markdown-css:/home/jek/R/x86_64-pc-linux-gnu-library/4.0/rmarkdown/rmarkdown/templates/github_document/resources/github.css' --email-obfuscation none --metadata pagetitle=PREVIEW 
+make[1]: Leaving directory '/media/jeksterslab/scripts/r/build_jeksterslabRterm'
+Rscript r_packages.R
+Library path: /home/jek/R/x86_64-pc-linux-gnu-library/4.0 
+
+     checking for file ‘/tmp/RtmpZDDkqX/remotes63ca1184d787d/jeksterslabds-jeksterslabRpkg-9b1467d/DESCRIPTION’ ...  ✔  checking for file ‘/tmp/RtmpZDDkqX/remotes63ca1184d787d/jeksterslabds-jeksterslabRpkg-9b1467d/DESCRIPTION’
+  ─  preparing ‘jeksterslabRpkg’:
+     checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
+  ─  checking for LF line-endings in source and make files and shell scripts
+  ─  checking for empty or unneeded directories
+  ─  building ‘jeksterslabRpkg_0.9.0.tar.gz’
+     
+
+     checking for file ‘/tmp/RtmpZDDkqX/remotes63ca1b69dc11/jeksterslabds-jeksterslabRlib-9d58b3f/DESCRIPTION’ ...  ✔  checking for file ‘/tmp/RtmpZDDkqX/remotes63ca1b69dc11/jeksterslabds-jeksterslabRlib-9d58b3f/DESCRIPTION’
+  ─  preparing ‘jeksterslabRlib’:
+   checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
+  ─  checking for LF line-endings in source and make files and shell scripts
+  ─  checking for empty or unneeded directories
+  ─  building ‘jeksterslabRlib_0.9.0.tar.gz’
+     
+Rscript -e 'styler::style_dir()'
+Styling  158  files:
+ r_packages.R                                                         ✔ 
+ r_packages_orig.R                                                    ✔ 
+ build_boilerplatePackage/01_dependencies.R                           ✔ 
+ build_boilerplatePackage/02_create.R                                 ✔ 
+ build_boilerplatePackage/03_build.R                                  ✔ 
+ build_jeksterslabRterm/01_dependencies.R                             ✔ 
+ build_jeksterslabRterm/02_deploy.R                                   ✔ 
+ jeksterslabRdoc/R/doc_abstract.R                                     ✔ 
+ jeksterslabRdoc/R/doc_attributes.R                                   ✔ 
+ jeksterslabRdoc/R/doc_authorinfo.R                                   ✔ 
+ jeksterslabRdoc/R/doc_bib_latex.R                                    ✔ 
+ jeksterslabRdoc/R/doc_citation_adoc.R                                ✔ 
+ jeksterslabRdoc/R/doc_citation_latex.R                               ✔ 
+ jeksterslabRdoc/R/doc_doi2bib.R                                      ✔ 
+ jeksterslabRdoc/R/doc_knit.R                                         ✔ 
+ jeksterslabRdoc/R/doc_knit_adoc.R                                    ✔ 
+ jeksterslabRdoc/R/doc_knit_latex.R                                   ✔ 
+ jeksterslabRdoc/R/doc_manuscript.R                                   ✔ 
+ jeksterslabRdoc/R/doc_retag.R                                        ✔ 
+ jeksterslabRdoc/R/doc_retag_adoc.R                                   ✔ 
+ jeksterslabRdoc/R/doc_retag_latex.R                                  ✔ 
+ jeksterslabRdoc/R/doc_rm_tag.R                                       ✔ 
+ jeksterslabRdoc/inst/extdata/header.R                                ✔ 
+ jeksterslabRdoc/inst/extdata/new_tests.R                             ✔ 
+ jeksterslabRdoc/tests/testthat.R                                     ✔ 
+ jeksterslabRdoc/tests/testthat/test_2_plus_2.R                       ✔ 
+ jeksterslabRds/R/dat.R                                               ✔ 
+ jeksterslabRds/R/data_galton.R                                       ✔ 
+ jeksterslabRds/R/linreg.R                                            ✔ 
+ jeksterslabRds/R/z.R                                                 ✔ 
+ jeksterslabRds/data_raw/data_raw_galton.R                            ✔ 
+ jeksterslabRds/tests/testthat.R                                      ✔ 
+ jeksterslabRds/tests/testthat/test_dat_linreg_X_rnorm.R              ✔ 
+ jeksterslabRds/tests/testthat/test_linreg_inv.R                      ✔ 
+ jeksterslabRds/tests/testthat/test_z.R                               ✔ 
+ jeksterslabRlib/R/data_springer_books_available.R                    ✔ 
+ jeksterslabRlib/R/data_springer_books_doi.R                          ✔ 
+ jeksterslabRlib/R/lib_extract_isbn_crossref.R                        ✔ 
+ jeksterslabRlib/R/lib_isbn2googlebooksid.R                           ✔ 
+ jeksterslabRlib/R/lib_isbn2lccn.R                                    ✔ 
+ jeksterslabRlib/R/lib_metadata_calibre.R                             ✔ 
+ jeksterslabRlib/R/lib_metadata_crossref.R                            ✔ 
+ jeksterslabRlib/R/lib_metadata_lc.R                                  ✔ 
+ jeksterslabRlib/R/lib_metadata_openlib.R                             ✔ 
+ jeksterslabRlib/R/lib_remove_doi_http.R                              ✔ 
+ jeksterslabRlib/R/lib_remove_doi_prefix.R                            ✔ 
+ jeksterslabRlib/R/lib_remove_isbn_dashes.R                           ✔ 
+ jeksterslabRlib/R/lib_springer_calibredb_add.R                       ✔ 
+ jeksterslabRlib/R/lib_springer_download.R                            ✔ 
+ jeksterslabRlib/R/lib_springer_files.R                               ✔ 
+ jeksterslabRlib/R/lib_springer_link.R                                ✔ 
+ jeksterslabRlib/R/lib_wiley_doi2isbn.R                               ✔ 
+ jeksterslabRlib/data_raw/data_springer_books.R                       ✔ 
+ jeksterslabRlib/data_raw/metadata_springer_books.R                   ✔ 
+ jeksterslabRlib/data_raw/springer_books_download.R                   ✔ 
+ jeksterslabRlib/inst/extdata/data_springer_books.R                   ✔ 
+ jeksterslabRlib/inst/shiny/data_springer_books_available/server.R    ✔ 
+ jeksterslabRlib/inst/shiny/data_springer_books_available/ui.R        ✔ 
+ jeksterslabRlib/tests/testthat.R                                     ✔ 
+ jeksterslabRlib/tests/testthat/test_lib_extract_isbn_crossref.R      ✔ 
+ jeksterslabRlib/tests/testthat/test_lib_isbn2googlebooksid.R         ✔ 
+ jeksterslabRlib/tests/testthat/test_lib_metadata_crossref.R          ✔ 
+ jeksterslabRlib/tests/testthat/test_lib_metadata_lc.R                ✔ 
+ jeksterslabRlib/tests/testthat/test_lib_remove_doi_prefix.R          ✔ 
+ jeksterslabRnotes/R/data_galton.R                                    ✔ 
+ jeksterslabRnotes/R/z.R                                              ✔ 
+ jeksterslabRnotes/data_raw/data_raw_galton.R                         ✔ 
+ jeksterslabRnotes/tests/testthat.R                                   ✔ 
+ jeksterslabRnotes/tests/testthat/test_z.R                            ✔ 
+ jeksterslabRnotes/vignettes/articles/data_wrangling_list_to_df.R     ✔ 
+ jeksterslabRnotes/vignettes/articles/reporting_rscript_to_markdown.R ✔ 
+ jeksterslabRpkg/R/pkg_aliases.R                                      ✔ 
+ jeksterslabRpkg/R/pkg_appveyor.R                                     ✔ 
+ jeksterslabRpkg/R/pkg_build.R                                        ✔ 
+ jeksterslabRpkg/R/pkg_checkroot.R                                    ✔ 
+ jeksterslabRpkg/R/pkg_create.R                                       ✔ 
+ jeksterslabRpkg/R/pkg_data.R                                         ✔ 
+ jeksterslabRpkg/R/pkg_description.R                                  ✔ 
+ jeksterslabRpkg/R/pkg_description_yml.R                              ✔ 
+ jeksterslabRpkg/R/pkg_find_root.R                                    ✔ 
+ jeksterslabRpkg/R/pkg_getstarted.R                                   ✔ 
+ jeksterslabRpkg/R/pkg_git.R                                          ✔ 
+ jeksterslabRpkg/R/pkg_gitignore.R                                    ✔ 
+ jeksterslabRpkg/R/pkg_license.R                                      ✔ 
+ jeksterslabRpkg/R/pkg_namespace.R                                    ✔ 
+ jeksterslabRpkg/R/pkg_news.R                                         ✔ 
+ jeksterslabRpkg/R/pkg_pkgdown.R                                      ✔ 
+ jeksterslabRpkg/R/pkg_r.R                                            ✔ 
+ jeksterslabRpkg/R/pkg_rbuildignore.R                                 ✔ 
+ jeksterslabRpkg/R/pkg_rd.R                                           ✔ 
+ jeksterslabRpkg/R/pkg_readme.R                                       ✔ 
+ jeksterslabRpkg/R/pkg_render.R                                       ✔ 
+ jeksterslabRpkg/R/pkg_rproj.R                                        ✔ 
+ jeksterslabRpkg/R/pkg_test.R                                         ✔ 
+ jeksterslabRpkg/R/pkg_travis.R                                       ✔ 
+ jeksterslabRpkg/R/pkg_valid_name.R                                   ✔ 
+ jeksterslabRpkg/R/pkg_vignette.R                                     ✔ 
+ jeksterslabRpkg/R/util_lapply.R                                      ✔ 
+ jeksterslabRpkg/R/util_list2vector.R                                 ✔ 
+ jeksterslabRpkg/R/util_os.R                                          ✔ 
+ jeksterslabRpkg/R/util_render.R                                      ✔ 
+ jeksterslabRpkg/R/util_search.R                                      ✔ 
+ jeksterslabRpkg/R/util_style.R                                       ✔ 
+ jeksterslabRpkg/R/util_txt2file.R                                    ✔ 
+ jeksterslabRpkg/tests/testthat.R                                     ✔ 
+ jeksterslabRpkg/tests/testthat/test_2_plus_2.R                       ✔ 
+ jeksterslabRterm/R/term_bash.R                                       ✔ 
+ jeksterslabRterm/R/term_git_config.R                                 ✔ 
+ jeksterslabRterm/R/term_install.R                                    ✔ 
+ jeksterslabRterm/R/term_renviron.R                                   ✔ 
+ jeksterslabRterm/R/term_rprofile.R                                   ✔ 
+ jeksterslabRterm/R/term_user_lib.R                                   ✔ 
+ jeksterslabRterm/R/term_vim.R                                        ✔ 
+ jeksterslabRterm/R/term_xterm.R                                      ✔ 
+ jeksterslabRterm/R/util_os.R                                         ✔ 
+ jeksterslabRterm/R/util_txt2file.R                                   ✔ 
+ jeksterslabRterm/inst/extdata/Rextras/Rprofile.R                     ✔ 
+ jeksterslabRterm/tests/testthat.R                                    ✔ 
+ jeksterslabRterm/tests/testthat/test_term_bash.R                     ✔ 
+ jeksterslabRterm/tests/testthat/test_term_renviron.R                 ✔ 
+ jeksterslabRterm/tests/testthat/test_term_rprofile.R                 ✔ 
+ jeksterslabRterm/tests/testthat/test_term_user_lib.R                 ✔ 
+ jeksterslabRterm/tests/testthat/test_term_vim.R                      ✔ 
+ jeksterslabRutils/R/util_bind.R                                      ✔ 
+ jeksterslabRutils/R/util_cat_sys.R                                   ✔ 
+ jeksterslabRutils/R/util_check_file_type.R                           ✔ 
+ jeksterslabRutils/R/util_clean_tempdir.R                             ✔ 
+ jeksterslabRutils/R/util_get_numbers.R                               ✔ 
+ jeksterslabRutils/R/util_lapply.R                                    ✔ 
+ jeksterslabRutils/R/util_list2vector.R                               ✔ 
+ jeksterslabRutils/R/util_os.R                                        ✔ 
+ jeksterslabRutils/R/util_pkgload.R                                   ✔ 
+ jeksterslabRutils/R/util_rand_str.R                                  ✔ 
+ jeksterslabRutils/R/util_render.R                                    ✔ 
+ jeksterslabRutils/R/util_search.R                                    ✔ 
+ jeksterslabRutils/R/util_shiny.R                                     ✔ 
+ jeksterslabRutils/R/util_style.R                                     ✔ 
+ jeksterslabRutils/R/util_txt2file.R                                  ✔ 
+ jeksterslabRutils/R/util_url_exists.R                                ✔ 
+ jeksterslabRutils/R/util_valid_email.R                               ✔ 
+ jeksterslabRutils/R/util_wget.R                                      ✔ 
+ jeksterslabRutils/R/util_xml2list.R                                  ✔ 
+ jeksterslabRutils/tests/testthat.R                                   ✔ 
+ jeksterslabRutils/tests/testthat/test_util_bind.R                    ✔ 
+ jeksterslabRutils/tests/testthat/test_util_cat_sys.R                 ✔ 
+ jeksterslabRutils/tests/testthat/test_util_check_file_type.R         ✔ 
+ jeksterslabRutils/tests/testthat/test_util_get_numbers.R             ✔ 
+ jeksterslabRutils/tests/testthat/test_util_lapply.R                  ✔ 
+ jeksterslabRutils/tests/testthat/test_util_list2vector.R             ✔ 
+ jeksterslabRutils/tests/testthat/test_util_os.R                      ✔ 
+ jeksterslabRutils/tests/testthat/test_util_render.R                  ✔ 
+ jeksterslabRutils/tests/testthat/test_util_search.R                  ✔ 
+ jeksterslabRutils/tests/testthat/test_util_style.R                   ✔ 
+ jeksterslabRutils/tests/testthat/test_util_txt2file.R                ✔ 
+ jeksterslabRutils/tests/testthat/test_util_url_exists.R              ✔ 
+ jeksterslabRutils/tests/testthat/test_util_valid_email.R             ✔ 
+ jeksterslabRutils/tests/testthat/test_util_wget.R                    ✔ 
+ jeksterslabRutils/tests/testthat/test_util_xml2list.R                ✔ 
+────────────────────────────────────────────────────────────────────
+Status	Count	Legend 
+✔ 	158	File unchanged.
+ℹ 	0	File changed.
+✖ 	0	Styling threw an error.
+────────────────────────────────────────────────────────────────────
+(cd jeksterslabRpkg && make clean)
+make[1]: Entering directory '/media/jeksterslab/scripts/r/jeksterslabRpkg'
+rm -rf /media/jeksterslab/scripts/r/jeksterslabRpkg/docs/*
+rm -rf /media/jeksterslab/scripts/r/jeksterslabRpkg/man/*
+rm -rf /media/jeksterslab/scripts/r/jeksterslabRpkg/tests/testthat/*.html
+rm -rf /media/jeksterslab/scripts/r/jeksterslabRpkg/tests/testthat/*.md
+rm -rf /media/jeksterslab/scripts/r/jeksterslabRpkg/vignettes/*.html
+rm -rf /media/jeksterslab/scripts/r/jeksterslabRpkg/vignettes/*.md
+cp /media/jeksterslab/scripts/r/jeksterslabRutils/R/util_search.R /media/jeksterslab/scripts/r/jeksterslabRpkg/R
+cp /media/jeksterslab/scripts/r/jeksterslabRutils/R/util_os.R /media/jeksterslab/scripts/r/jeksterslabRpkg/R
+cp /media/jeksterslab/scripts/r/jeksterslabRutils/R/util_lapply.R /media/jeksterslab/scripts/r/jeksterslabRpkg/R
+cp /media/jeksterslab/scripts/r/jeksterslabRutils/R/util_render.R /media/jeksterslab/scripts/r/jeksterslabRpkg/R
+cp /media/jeksterslab/scripts/r/jeksterslabRutils/R/util_style.R /media/jeksterslab/scripts/r/jeksterslabRpkg/R
+cp /media/jeksterslab/scripts/r/jeksterslabRutils/R/util_txt2file.R /media/jeksterslab/scripts/r/jeksterslabRpkg/R
+cp /media/jeksterslab/scripts/r/jeksterslabRutils/R/util_list2vector.R /media/jeksterslab/scripts/r/jeksterslabRpkg/R
+git add --all
+git commit -m "Automated clean."
+[master 2135967] Automated clean.
+ 42 files changed, 1676 deletions(-)
+ delete mode 100644 man/pkg_appveyor.Rd
+ delete mode 100644 man/pkg_build.Rd
+ delete mode 100644 man/pkg_checkroot.Rd
+ delete mode 100644 man/pkg_checkroot_subdir.Rd
+ delete mode 100644 man/pkg_create.Rd
+ delete mode 100644 man/pkg_data.Rd
+ delete mode 100644 man/pkg_description.Rd
+ delete mode 100644 man/pkg_description_yml.Rd
+ delete mode 100644 man/pkg_find_root.Rd
+ delete mode 100644 man/pkg_getstarted.Rd
+ delete mode 100644 man/pkg_git.Rd
+ delete mode 100644 man/pkg_gitignore.Rd
+ delete mode 100644 man/pkg_license.Rd
+ delete mode 100644 man/pkg_namespace.Rd
+ delete mode 100644 man/pkg_news.Rd
+ delete mode 100644 man/pkg_pkgdown.Rd
+ delete mode 100644 man/pkg_r.Rd
+ delete mode 100644 man/pkg_rbuildignore.Rd
+ delete mode 100644 man/pkg_rd.Rd
+ delete mode 100644 man/pkg_readme.Rd
+ delete mode 100644 man/pkg_render.Rd
+ delete mode 100644 man/pkg_rproj.Rd
+ delete mode 100644 man/pkg_test.Rd
+ delete mode 100644 man/pkg_travis.Rd
+ delete mode 100644 man/pkg_valid_name.Rd
+ delete mode 100644 man/pkg_vignette.Rd
+ delete mode 100644 man/rbuild.Rd
+ delete mode 100644 man/rchk.Rd
+ delete mode 100644 man/rpkg.Rd
+ delete mode 100644 man/rspkg.Rd
+ delete mode 100644 man/rsty.Rd
+ delete mode 100644 man/rstyle.Rd
+ delete mode 100644 man/rtest.Rd
+ delete mode 100644 man/util_lapply.Rd
+ delete mode 100644 man/util_list2vector.Rd
+ delete mode 100644 man/util_os.Rd
+ delete mode 100644 man/util_render.Rd
+ delete mode 100644 man/util_search_ext.Rd
+ delete mode 100644 man/util_search_pattern.Rd
+ delete mode 100644 man/util_search_r.Rd
+ delete mode 100644 man/util_style.Rd
+ delete mode 100644 man/util_txt2file.Rd
+git push
+make[1]: Leaving directory '/media/jeksterslab/scripts/r/jeksterslabRpkg'
+(cd jeksterslabRterm && make)
+make[1]: Entering directory '/media/jeksterslab/scripts/r/jeksterslabRterm'
+rm -rf /media/jeksterslab/scripts/r/jeksterslabRterm/docs/*
+rm -rf /media/jeksterslab/scripts/r/jeksterslabRterm/man/*
+rm -rf /media/jeksterslab/scripts/r/jeksterslabRterm/tests/testthat/*.html
+rm -rf /media/jeksterslab/scripts/r/jeksterslabRterm/tests/testthat/*.md
+rm -rf /media/jeksterslab/scripts/r/jeksterslabRterm/vignettes/*.html
+rm -rf /media/jeksterslab/scripts/r/jeksterslabRterm/vignettes/*.md
+cp /media/jeksterslab/scripts/r/jeksterslabRutils/R/util_os.R /media/jeksterslab/scripts/r/jeksterslabRterm/R
+cp /media/jeksterslab/scripts/r/jeksterslabRutils/R/util_txt2file.R /media/jeksterslab/scripts/r/jeksterslabRterm/R
+Rscript -e 'devtools::install("/media/jeksterslab/scripts/r/jeksterslabRterm")'
+     checking for file ‘/media/jeksterslab/scripts/r/jeksterslabRterm/DESCRIPTION’ ...  ✔  checking for file ‘/media/jeksterslab/scripts/r/jeksterslabRterm/DESCRIPTION’
+  ─  preparing ‘jeksterslabRterm’:
+     checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
+  ─  checking for LF line-endings in source and make files and shell scripts
+  ─  checking for empty or unneeded directories
+   Removed empty directory ‘jeksterslabRterm/man’
+   Removed empty directory ‘jeksterslabRterm/vignettes’
+  ─  building ‘jeksterslabRterm_0.9.0.tar.gz’
+     
+Running /usr/lib64/R/bin/R CMD INSTALL \
+  /tmp/RtmpPnpl8c/jeksterslabRterm_0.9.0.tar.gz --install-tests 
+* installing to library ‘/home/jek/R/x86_64-pc-linux-gnu-library/4.0’
+* installing *source* package ‘jeksterslabRterm’ ...
+** using staged installation
+** R
+** inst
+** tests
+** byte-compile and prepare package for lazy loading
+No man pages found in package  ‘jeksterslabRterm’ 
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (jeksterslabRterm)
+Rscript -e 'jeksterslabRpkg::pkg_build("/media/jeksterslab/scripts/r/jeksterslabRterm", git = TRUE, github = TRUE)'
+Styling  1  files:
+ /media/jeksterslab/scripts/r/jeksterslabRterm/R/term_bash.R Styling  1  files:
+ /media/jeksterslab/scripts/r/jeksterslabRterm/R/term_install.R Styling  1  files:
+Styling  1  files:
+ /media/jeksterslab/scripts/r/jeksterslabRterm/R/term_renviron.R  /media/jeksterslab/scripts/r/jeksterslabRterm/R/term_git_config.R Styling  1  files:
+ /media/jeksterslab/scripts/r/jeksterslabRterm/R/term_rprofile.R Styling  1  files:
+Styling  1  files:
+ /media/jeksterslab/scripts/r/jeksterslabRterm/R/term_user_lib.R  /media/jeksterslab/scripts/r/jeksterslabRterm/R/term_vim.R ✔ 
+──────────────────────────────────────────────────────────────
+Status	Count	Legend 
+✔ 	1	File unchanged.
+ℹ 	0	File changed.
+✖ 	0	Styling threw an error.
+──────────────────────────────────────────────────────────────
+Styling  1  files:
+ /media/jeksterslab/scripts/r/jeksterslabRterm/R/util_txt2file.R ✔ 
+───────────────────────────────────────────────────────────────
+Status	Count	Legend 
+✔ 	1	File unchanged.
+ℹ 	0	File changed.
+✖ 	0	Styling threw an error.
+───────────────────────────────────────────────────────────────
+✔ 
+Styling  1  files:
+ /media/jeksterslab/scripts/r/jeksterslabRterm/tests/testthat/test_term_user_lib.R ───────────────────────────────────────────────────────────
+Status	Count	Legend 
+✔ 
+✔ 	1	File unchanged.
+ℹ 	0	File changed.
+✖ 	0	Styling threw an error.
+───────────────────────────────────────────────────────────
+✔ 
+────────────────────────────────────────────────────────────────────────────────
+Status	Count	Legend 
+✔ 	1	File unchanged.
+ℹ 	0	File changed.
+✖ 	0	Styling threw an error.
+───────────────────────────────────────────────────────────────
+Status	Count	Legend 
+✔ 	1	File unchanged.
+ℹ 	0	File changed.
+✖ 	0	Styling threw an error.
+────────────────────────────────────────────────────────────────────────────────
+✔ 
+───────────────────────────────────────────────────────────────
+✔ 
+───────────────────────────────────────────────────────────────
+Status	Count	Legend 
+✔ 	1	File unchanged.
+ℹ 	0	File changed.
+✖ 	0	Styling threw an error.
+─────────────────────────────────────────────────────────────────
+Status	Count	Legend 
+✔ 	1	File unchanged.
+ℹ 	0	File changed.
+✖ 	0	Styling threw an error.
+───────────────────────────────────────────────────────────────
+─────────────────────────────────────────────────────────────────
+Styling  1  files:
+ /media/jeksterslab/scripts/r/jeksterslabRterm/R/term_xterm.R ✔ 
+Styling  1  files:
+ /media/jeksterslab/scripts/r/jeksterslabRterm/README.Rmd ───────────────────────────────────────────────────────────────
+Status	Count	Legend 
+✔ 	1	File unchanged.
+ℹ 	0	File changed.
+✖ 	0	Styling threw an error.
+───────────────────────────────────────────────────────────────
+✔ 
+Styling  1  files:
+ /media/jeksterslab/scripts/r/jeksterslabRterm/inst/extdata/Rextras/Rprofile.R ✔ 
+Styling  1  files:
+ /media/jeksterslab/scripts/r/jeksterslabRterm/R/util_os.R ────────────────────────────────────────────────────────────
+Status	Count	Legend 
+✔ 	1	File unchanged.
+ℹ 	0	File changed.
+✖ 	0	Styling threw an error.
+────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────
+Status	Count	Legend 
+✔ 	1	File unchanged.
+ℹ 	0	File changed.
+✖ 	0	Styling threw an error.
+✔ ──────────────────────────────────────────────────────────
+
+✔ 
+────────────────────────────────────────────────────────
+Status	Count	Legend 
+✔ 
+✔ 	1	File unchanged.
+ℹ 	0	File changed.
+✖ 	0	Styling threw an error.
+─────────────────────────────────────────────────────────────────────────────
+Status	Count	Legend 
+✔ 	1	File unchanged.
+ℹ 	0	File changed.
+─────────────────────────────────────────────────────────
+Status	Count	Legend 
+✖ 	0	Styling threw an error.
+✔ 	1	File unchanged.
+────────────────────────────────────────────────────────
+ℹ 	0	File changed.
+✖ 	0	Styling threw an error.
+─────────────────────────────────────────────────────────────────────────────
+─────────────────────────────────────────────────────────
+Styling  1  files:
+Styling  1  files:
+ /media/jeksterslab/scripts/r/jeksterslabRterm/tests/testthat.R  /media/jeksterslab/scripts/r/jeksterslabRterm/tests/testthat/test_term_renviron.R Styling  1  files:
+ /media/jeksterslab/scripts/r/jeksterslabRterm/tests/testthat/test_term_rprofile.R Styling  1  files:
+ /media/jeksterslab/scripts/r/jeksterslabRterm/tests/testthat/test_term_bash.R ✔ 
+Styling  1  files:
+ /media/jeksterslab/scripts/r/jeksterslabRterm/tests/testthat/test_term_vim.R ✔ 
+────────────────────────────────────────────────────────────────────────────────
+Status	Count	Legend 
+✔ 	1	File unchanged.
+ℹ 	0	File changed.
+✖ 	0	Styling threw an error.
+──────────────────────────────────────────────────────────────
+Status	Count	Legend 
+✔ 	1	File unchanged.
+ℹ 	0	File changed.
+────────────────────────────────────────────────────────────────────────────────
+✖ 	0	Styling threw an error.
+✔ 
+────────────────────────────────────────────────────────────────────────────────
+Status	Count	Legend 
+✔ 	1	File unchanged.
+──────────────────────────────────────────────────────────────
+ℹ 	0	File changed.
+✖ 	0	Styling threw an error.
+────────────────────────────────────────────────────────────────────────────────
+✔ 
+✔ 
+────────────────────────────────────────────────────────────────────────────
+Status	Count	Legend 
+✔ 	1	File unchanged.
+ℹ 	0	File changed.
+✖ 	0	Styling threw an error.
+─────────────────────────────────────────────────────────────────────────────
+Status	Count	Legend 
+✔ 	1	File unchanged.
+ℹ 	0	File changed.
+────────────────────────────────────────────────────────────────────────────
+✖ 	0	Styling threw an error.
+─────────────────────────────────────────────────────────────────────────────
+Writing NAMESPACE
+Writing NAMESPACE
+Writing term_bash.Rd
+Writing term_git_config.Rd
+Writing term_install.Rd
+Writing term_renviron.Rd
+Writing term_rprofile.Rd
+Writing term_user_lib.Rd
+Writing term_vim.Rd
+Writing term_xterm.Rd
+Writing util_os.Rd
+Writing util_txt2file.Rd
+  |                                                                              |                                                                      |   0%  |                                                                              |.......................                                               |  33%
+   inline R code fragments
+
+  |                                                                              |...............................................                       |  67%
+label: unnamed-chunk-1 (with options) 
+List of 1
+ $ include: logi FALSE
+
+  |                                                                              |......................................................................| 100%
+  ordinary text without R code
+
+
+/usr/bin/pandoc +RTS -K512m -RTS README.utf8.md --to gfm --from markdown+autolink_bare_uris+tex_math_single_backslash --output README.md --standalone --template /home/jek/R/x86_64-pc-linux-gnu-library/4.0/rmarkdown/rmarkdown/templates/github_document/resources/default.md 
+/usr/bin/pandoc +RTS -K512m -RTS README.md --to html4 --from gfm --output README.html --standalone --self-contained --highlight-style pygments --template /home/jek/R/x86_64-pc-linux-gnu-library/4.0/rmarkdown/rmarkdown/templates/github_document/resources/preview.html --variable 'github-markdown-css:/home/jek/R/x86_64-pc-linux-gnu-library/4.0/rmarkdown/rmarkdown/templates/github_document/resources/github.css' --email-obfuscation none --metadata pagetitle=PREVIEW 
+  |                                                                              |                                                                      |   0%  |                                                                              |......                                                                |   9%
+   inline R code fragments
+
+  |                                                                              |.............                                                         |  18%
+label: setup
+  |                                                                              |                                                                      |   0%  |                                                                              |....                                                                  |   6%
+   inline R code fragments
+
+  |                                                                              |.........                                                             |  12%
+label: setup
+  |                                                                              |                                                                      |   0%  |                                                                              |......                                                                |   9%
+   inline R code fragments
+
+  |                                                                              |.............                                                         |  18%
+label: setup
+  |                                                                              |...................                                                   |  27%
+  ordinary text without R code
+
+  |                                                                              |.........................                                             |  36%
+label: parameters
+  |                                                                              |.............                                                         |  19%
+  ordinary text without R code
+
+  |                                                                              |..................                                                    |  25%
+label: parameters
+  |                                                                              |...................                                                   |  27%
+  ordinary text without R code
+
+  |                                                                              |.........................                                             |  36%
+label: parameters
+  |                                                                              |................................                                      |  45%
+  ordinary text without R code
+
+  |                                                                              |......................................                                |  55%
+label: test
+  |                                                                              |................................                                      |  45%
+  ordinary text without R code
+
+  |                                                                              |......................................                                |  55%
+label: test
+  |                                                                              |.............................................                         |  64%
+  ordinary text without R code
+
+  |                                                                              |...................................................                   |  73%
+label: testthat_01 (with options) 
+List of 1
+ $ echo:  |                                                                              |......................                                                |  31%
+  ordinary text without R code
+
+  |                                                                              |..........................                                            |  38%
+ logi TRUE
+
+  |                                                                              |.............................................                         |  64%
+label: test
+label: testthat_01 (with options) 
+List of 1
+ $ echo: logi TRUE
+
+  |                                                                              |.........................................................             |  82%
+  ordinary text without R code
+
+  |                                                                              |................................................................      |  91%
+label: cleanup
+  |                                                                              |...................................................                   |  73%
+label: testthat_02 (with options) 
+List of 1
+ $ echo: logi TRUE
+
+  |                                                                              |......................................................................| 100%
+  ordinary text without R code
+
+
+  |                                                                              |...............................                                       |  44%
+label: testthat_01 (with options) 
+List of 1
+ $ echo:/usr/bin/pandoc +RTS -K512m -RTS test_term_user_lib.utf8.md --to gfm --from markdown+autolink_bare_uris+tex_math_single_backslash --output test_term_user_lib.md --standalone --table-of-contents --toc-depth 3 --template /home/jek/R/x86_64-pc-linux-gnu-library/4.0/rmarkdown/rmarkdown/templates/github_document/resources/default.md 
+ logi TRUE
+
+
+  |                                                                              |.........................................................             |  82%
+  ordinary text without R code
+
+  |                                                                              |................................................................      |  91%
+label: cleanup
+  |                                                                              |......................................................................| 100%
+  ordinary text without R code
+
+
+/usr/bin/pandoc +RTS -K512m -RTS test_term_vim.utf8.md --to gfm --from markdown+autolink_bare_uris+tex_math_single_backslash --output test_term_vim.md --standalone --table-of-contents --toc-depth 3 --template /home/jek/R/x86_64-pc-linux-gnu-library/4.0/rmarkdown/rmarkdown/templates/github_document/resources/default.md 
+/usr/bin/pandoc +RTS -K512m -RTS test_term_user_lib.md --to html4 --from gfm --output test_term_user_lib.html --standalone --self-contained --highlight-style pygments --template /home/jek/R/x86_64-pc-linux-gnu-library/4.0/rmarkdown/rmarkdown/templates/github_document/resources/preview.html --variable 'github-markdown-css:/home/jek/R/x86_64-pc-linux-gnu-library/4.0/rmarkdown/rmarkdown/templates/github_document/resources/github.css' --email-obfuscation none --metadata pagetitle=PREVIEW 
+/usr/bin/pandoc +RTS -K512m -RTS test_term_vim.md --to html4 --from gfm --output test_term_vim.html --standalone --self-contained --highlight-style pygments --template /home/jek/R/x86_64-pc-linux-gnu-library/4.0/rmarkdown/rmarkdown/templates/github_document/resources/preview.html --variable 'github-markdown-css:/home/jek/R/x86_64-pc-linux-gnu-library/4.0/rmarkdown/rmarkdown/templates/github_document/resources/github.css' --email-obfuscation none --metadata pagetitle=PREVIEW 
+Writing NAMESPACE
+Writing NAMESPACE
+── Building ──────────────────────────────────────────────── jeksterslabRterm ──
+Setting env vars:
+● CFLAGS    : -Wall -pedantic
+● CXXFLAGS  : -Wall -pedantic
+● CXX11FLAGS: -Wall -pedantic
+────────────────────────────────────────────────────────────────────────────────
+     checking for file ‘/media/jeksterslab/scripts/r/jeksterslabRterm/DESCRIPTION’ ...  ✔  checking for file ‘/media/jeksterslab/scripts/r/jeksterslabRterm/DESCRIPTION’
+  ─  preparing ‘jeksterslabRterm’:
+     checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
+  ─  checking for LF line-endings in source and make files and shell scripts
+  ─  checking for empty or unneeded directories
+     Removed empty directory ‘jeksterslabRterm/vignettes’
+  ─  building ‘jeksterslabRterm_0.9.0.tar.gz’
+     
+── Checking ──────────────────────────────────────────────── jeksterslabRterm ──
+Setting env vars:
+● _R_CHECK_CRAN_INCOMING_USE_ASPELL_: TRUE
+● _R_CHECK_CRAN_INCOMING_REMOTE_    : FALSE
+● _R_CHECK_CRAN_INCOMING_           : FALSE
+● _R_CHECK_FORCE_SUGGESTS_          : FALSE
+● NOT_CRAN                          : true
+── R CMD check ─────────────────────────────────────────────────────────────────
+* using log directory ‘/tmp/Rtmpr2QmEh/jeksterslabRterm.Rcheck’
+* using R version 4.0.0 (2020-04-24)
+* using platform: x86_64-pc-linux-gnu (64-bit)
+* using session charset: UTF-8
+* using options ‘--no-manual --as-cran’
+* checking for file ‘jeksterslabRterm/DESCRIPTION’ ... OK
+* this is package ‘jeksterslabRterm’ version ‘0.9.0’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... NOTE
+Found the following hidden files and directories:
+  tests/testthat/tmp/.bash_logout
+These were most likely included in error. See section ‘Package
+structure’ in the ‘Writing R Extensions’ manual.
+* checking for portable file names ... OK
+* checking for sufficient/correct file permissions ... OK
+* checking whether package ‘jeksterslabRterm’ can be installed ... OK
+* checking installed package size ... OK
+* checking package directory ... OK
+* checking for future file timestamps ... OK
+* checking DESCRIPTION meta-information ... OK
+* checking top-level files ... OK
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking R files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking dependencies in R code ... OK
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... OK
+* checking Rd files ... OK
+* checking Rd metadata ... OK
+* checking Rd line widths ... OK
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... OK
+* checking for code/documentation mismatches ... OK
+* checking Rd \usage sections ... OK
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking examples ... OK
+* checking for unstated dependencies in ‘tests’ ... OK
+* checking tests ...
+  Running ‘testthat.R’
+ OK
+* checking for non-standard things in the check directory ... OK
+* checking for detritus in the temp directory ... OK
+* DONE
+
+Status: 1 NOTE
+See
+  ‘/tmp/Rtmpr2QmEh/jeksterslabRterm.Rcheck/00check.log’
+for details.
+
+
+     checking for file ‘/media/jeksterslab/scripts/r/jeksterslabRterm/DESCRIPTION’ ...  ✔  checking for file ‘/media/jeksterslab/scripts/r/jeksterslabRterm/DESCRIPTION’
+  ─  preparing ‘jeksterslabRterm’:
+     checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
+  ─  checking for LF line-endings in source and make files and shell scripts
+  ─  checking for empty or unneeded directories
+   Removed empty directory ‘jeksterslabRterm/vignettes’
+  ─  building ‘jeksterslabRterm_0.9.0.tar.gz’
+     
+Running /usr/lib64/R/bin/R CMD INSTALL \
+  /tmp/Rtmpr2QmEh/jeksterslabRterm_0.9.0.tar.gz --install-tests 
+* installing to library ‘/home/jek/R/x86_64-pc-linux-gnu-library/4.0’
+* installing *source* package ‘jeksterslabRterm’ ...
+** using staged installation
+** R
+** inst
+** tests
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (jeksterslabRterm)
+── Installing package into temporary library ───────────────────────────────────
+══ Building pkgdown site ═══════════════════════════════════════════════════════
+Reading from: '/media/jeksterslab/scripts/r/jeksterslabRterm'
+Writing to:   '/media/jeksterslab/scripts/r/jeksterslabRterm/docs'
+── Initialising site ───────────────────────────────────────────────────────────
+Copying '../../../../../home/jek/R/x86_64-pc-linux-gnu-library/4.0/pkgdown/assets/bootstrap-toc.css' to 'bootstrap-toc.css'
+Copying '../../../../../home/jek/R/x86_64-pc-linux-gnu-library/4.0/pkgdown/assets/bootstrap-toc.js' to 'bootstrap-toc.js'
+Copying '../../../../../home/jek/R/x86_64-pc-linux-gnu-library/4.0/pkgdown/assets/docsearch.css' to 'docsearch.css'
+Copying '../../../../../home/jek/R/x86_64-pc-linux-gnu-library/4.0/pkgdown/assets/docsearch.js' to 'docsearch.js'
+Copying '../../../../../home/jek/R/x86_64-pc-linux-gnu-library/4.0/pkgdown/assets/link.svg' to 'link.svg'
+Copying '../../../../../home/jek/R/x86_64-pc-linux-gnu-library/4.0/pkgdown/assets/pkgdown.css' to 'pkgdown.css'
+Copying '../../../../../home/jek/R/x86_64-pc-linux-gnu-library/4.0/pkgdown/assets/pkgdown.js' to 'pkgdown.js'
+Writing 'sitemap.xml'
+Writing '404.html'
+── Building home ───────────────────────────────────────────────────────────────
+Writing 'authors.html'
+Reading '.github/CODE_OF_CONDUCT.md'
+Writing 'CODE_OF_CONDUCT.html'
+Reading '.github/CONTRIBUTING.md'
+Writing 'CONTRIBUTING.html'
+Reading '.github/ISSUE_TEMPLATE.md'
+Writing 'ISSUE_TEMPLATE.html'
+Reading '.github/SUPPORT.md'
+Writing 'SUPPORT.html'
+Reading 'LICENSE.md'
+Writing 'LICENSE.html'
+Writing 'LICENSE-text.html'
+── Building function reference ─────────────────────────────────────────────────
+Writing 'reference/index.html'
+Reading 'man/term_bash.Rd'
+Writing 'reference/term_bash.html'
+Reading 'man/term_git_config.Rd'
+Writing 'reference/term_git_config.html'
+Reading 'man/term_install.Rd'
+Writing 'reference/term_install.html'
+Reading 'man/term_renviron.Rd'
+Writing 'reference/term_renviron.html'
+Reading 'man/term_rprofile.Rd'
+Writing 'reference/term_rprofile.html'
+Reading 'man/term_user_lib.Rd'
+Writing 'reference/term_user_lib.html'
+Reading 'man/term_vim.Rd'
+Writing 'reference/term_vim.html'
+Reading 'man/term_xterm.Rd'
+Writing 'reference/term_xterm.html'
+Reading 'man/util_os.Rd'
+Writing 'reference/util_os.html'
+Reading 'man/util_txt2file.Rd'
+Writing 'reference/util_txt2file.html'
+══ DONE ════════════════════════════════════════════════════════════════════════
+Reinitialized existing Git repository in /media/jeksterslab/scripts/r/jeksterslabRterm/.git/
+[master 070b2a9] BUILD.
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+ create mode 100644 tests/testthat/tmp/.bash_logout
+https://github.com/jeksterslabds/jeksterslabRterm
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+make[1]: Leaving directory '/media/jeksterslab/scripts/r/jeksterslabRterm'
+(cd jeksterslabRutils && make clean)
+make[1]: Entering directory '/media/jeksterslab/scripts/r/jeksterslabRutils'
+rm -rf /media/jeksterslab/scripts/r/jeksterslabRutils/docs/*
+rm -rf /media/jeksterslab/scripts/r/jeksterslabRutils/man/*
+rm -rf /media/jeksterslab/scripts/r/jeksterslabRutils/tests/testthat/*.html
+rm -rf /media/jeksterslab/scripts/r/jeksterslabRutils/tests/testthat/*.md
+rm -rf /media/jeksterslab/scripts/r/jeksterslabRutils/vignettes/*.html
+rm -rf /media/jeksterslab/scripts/r/jeksterslabRutils/vignettes/*.md
+git add --all
+git commit -m "Automated clean."
+[master 8825ed6] Automated clean.
+ 21 files changed, 891 deletions(-)
+ delete mode 100644 man/util_bind.Rd
+ delete mode 100644 man/util_cat_sys.Rd
+ delete mode 100644 man/util_check_file_type.Rd
+ delete mode 100644 man/util_clean_tempdir.Rd
+ delete mode 100644 man/util_get_numbers.Rd
+ delete mode 100644 man/util_lapply.Rd
+ delete mode 100644 man/util_list2vector.Rd
+ delete mode 100644 man/util_os.Rd
+ delete mode 100644 man/util_pkgload.Rd
+ delete mode 100644 man/util_rand_str.Rd
+ delete mode 100644 man/util_render.Rd
+ delete mode 100644 man/util_search_ext.Rd
+ delete mode 100644 man/util_search_pattern.Rd
+ delete mode 100644 man/util_search_r.Rd
+ delete mode 100644 man/util_shiny.Rd
+ delete mode 100644 man/util_style.Rd
+ delete mode 100644 man/util_txt2file.Rd
+ delete mode 100644 man/util_url_exists.Rd
+ delete mode 100644 man/util_valid_email.Rd
+ delete mode 100644 man/util_wget.Rd
+ delete mode 100644 man/util_xml2list.Rd
+git push
+make[1]: Leaving directory '/media/jeksterslab/scripts/r/jeksterslabRutils'
+(cd jeksterslabRlib && make clean)
+make[1]: Entering directory '/media/jeksterslab/scripts/r/jeksterslabRlib'
+rm -rf /media/jeksterslab/scripts/r/jeksterslabRlib/docs/*
+rm -rf /media/jeksterslab/scripts/r/jeksterslabRlib/man/*
+rm -rf /media/jeksterslab/scripts/r/jeksterslabRlib/tests/testthat/*.html
+rm -rf /media/jeksterslab/scripts/r/jeksterslabRlib/tests/testthat/*.md
+rm -rf /media/jeksterslab/scripts/r/jeksterslabRlib/vignettes/*.html
+rm -rf /media/jeksterslab/scripts/r/jeksterslabRlib/vignettes/*.md
+git add --all
+git commit -m "Automated clean."
+[master dc8ac09] Automated clean.
+ 17 files changed, 711 deletions(-)
+ delete mode 100644 man/data_springer_books_available.Rd
+ delete mode 100644 man/lib_extract_isbn_crossref.Rd
+ delete mode 100644 man/lib_isbn2googlebooksid.Rd
+ delete mode 100644 man/lib_isbn2lccn.Rd
+ delete mode 100644 man/lib_metadata_calibre.Rd
+ delete mode 100644 man/lib_metadata_crossref.Rd
+ delete mode 100644 man/lib_metadata_lc.Rd
+ delete mode 100644 man/lib_metadata_openlib.Rd
+ delete mode 100644 man/lib_remove_doi_http.Rd
+ delete mode 100644 man/lib_remove_doi_prefix.Rd
+ delete mode 100644 man/lib_remove_isbn_dashes.Rd
+ delete mode 100644 man/lib_springer_calibredb_add.Rd
+ delete mode 100644 man/lib_springer_download.Rd
+ delete mode 100644 man/lib_springer_files.Rd
+ delete mode 100644 man/lib_springer_link.Rd
+ delete mode 100644 man/lib_wiley_doi2isbn.Rd
+ delete mode 100644 man/springer_books_doi.Rd
+git push
+make[1]: Leaving directory '/media/jeksterslab/scripts/r/jeksterslabRlib'
+(cd jeksterslabRdoc && make clean)
+make[1]: Entering directory '/media/jeksterslab/scripts/r/jeksterslabRdoc'
+rm -rf /media/jeksterslab/scripts/r/jeksterslabRdoc/docs/*
+rm -rf /media/jeksterslab/scripts/r/jeksterslabRdoc/man/*
+rm -rf /media/jeksterslab/scripts/r/jeksterslabRdoc/tests/testthat/*.html
+rm -rf /media/jeksterslab/scripts/r/jeksterslabRdoc/tests/testthat/*.md
+rm -rf /media/jeksterslab/scripts/r/jeksterslabRdoc/vignettes/*.html
+rm -rf /media/jeksterslab/scripts/r/jeksterslabRdoc/vignettes/*.md
+git add --all
+git commit -m "Automated clean."
+[master 189fb87] Automated clean.
+ 47 files changed, 5497 deletions(-)
+ delete mode 100644 docs/404.html
+ delete mode 100644 docs/LICENSE-text.html
+ delete mode 100644 docs/LICENSE.html
+ delete mode 100644 docs/authors.html
+ delete mode 100644 docs/bootstrap-toc.css
+ delete mode 100644 docs/bootstrap-toc.js
+ delete mode 100644 docs/docsearch.css
+ delete mode 100644 docs/docsearch.js
+ delete mode 100644 docs/index.html
+ delete mode 100644 docs/link.svg
+ delete mode 100644 docs/pkgdown.css
+ delete mode 100644 docs/pkgdown.js
+ delete mode 100644 docs/pkgdown.yml
+ delete mode 100644 docs/reference/doc_abstract.html
+ delete mode 100644 docs/reference/doc_attributes.html
+ delete mode 100644 docs/reference/doc_authorinfo.html
+ delete mode 100644 docs/reference/doc_bib_latex.html
+ delete mode 100644 docs/reference/doc_citation_adoc.html
+ delete mode 100644 docs/reference/doc_citation_latex.html
+ delete mode 100644 docs/reference/doc_doi2bib.html
+ delete mode 100644 docs/reference/doc_knit.html
+ delete mode 100644 docs/reference/doc_knit_adoc.html
+ delete mode 100644 docs/reference/doc_knit_latex.html
+ delete mode 100644 docs/reference/doc_manuscript.html
+ delete mode 100644 docs/reference/doc_retag.html
+ delete mode 100644 docs/reference/doc_retag_adoc.html
+ delete mode 100644 docs/reference/doc_retag_latex.html
+ delete mode 100644 docs/reference/doc_rm_tag.html
+ delete mode 100644 docs/reference/index.html
+ delete mode 100644 docs/sitemap.xml
+ delete mode 100644 man/doc_abstract.Rd
+ delete mode 100644 man/doc_attributes.Rd
+ delete mode 100644 man/doc_authorinfo.Rd
+ delete mode 100644 man/doc_bib_latex.Rd
+ delete mode 100644 man/doc_citation_adoc.Rd
+ delete mode 100644 man/doc_citation_latex.Rd
+ delete mode 100644 man/doc_doi2bib.Rd
+ delete mode 100644 man/doc_knit.Rd
+ delete mode 100644 man/doc_knit_adoc.Rd
+ delete mode 100644 man/doc_knit_latex.Rd
+ delete mode 100644 man/doc_manuscript.Rd
+ delete mode 100644 man/doc_retag.Rd
+ delete mode 100644 man/doc_retag_adoc.Rd
+ delete mode 100644 man/doc_retag_latex.Rd
+ delete mode 100644 man/doc_rm_tag.Rd
+ delete mode 100644 tests/testthat/test_2_plus_2.html
+ delete mode 100644 tests/testthat/test_2_plus_2.md
+git push
+make[1]: Leaving directory '/media/jeksterslab/scripts/r/jeksterslabRdoc'
+(cd build_boilerplatePackage && make clean)
+make[1]: Entering directory '/media/jeksterslab/scripts/r/build_boilerplatePackage'
+(cd boilerplatePackage && git checkout master && git rm -rf \* && git commit -m "Automated clean." && git push origin master)
+Your branch is up to date with 'origin/master'.
+rm -rf DESCRIPTION.yml
+rm -rf *.html
+rm -rf *.md
+make[1]: Leaving directory '/media/jeksterslab/scripts/r/build_boilerplatePackage'
+(cd build_jeksterslabRterm && make)
+make[1]: Entering directory '/media/jeksterslab/scripts/r/build_jeksterslabRterm'
+Rscript "01_dependencies.R"
+Library path: /home/jek/R/x86_64-pc-linux-gnu-library/4.0 
+     checking for file ‘/tmp/Rtmp4FbMyQ/remotes640dc3c61ec27/jeksterslabds-jeksterslabRterm-070b2a9/DESCRIPTION’ ...  ✔  checking for file ‘/tmp/Rtmp4FbMyQ/remotes640dc3c61ec27/jeksterslabds-jeksterslabRterm-070b2a9/DESCRIPTION’
+  ─  preparing ‘jeksterslabRterm’:
+     checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
+  ─  checking for LF line-endings in source and make files and shell scripts
+  ─  checking for empty or unneeded directories
+  ─  building ‘jeksterslabRterm_0.9.0.tar.gz’
+     
+:: Synchronizing package databases...
+ core is up to date
+ extra is up to date
+ community is up to date
+ multilib is up to date
+:: Starting full system upgrade...
+ there is nothing to do
+Rscript -e 'rmarkdown::render("01_dependencies.R")'
+  |                                                                              |                                                                      |   0%  |                                                                              |............                                                          |  17%
+   inline R code fragments
+
+  |                                                                              |.......................                                               |  33%
+label: user_lib
+  |                                                                              |...................................                                   |  50%
+  ordinary text without R code
+
+  |                                                                              |...............................................                       |  67%
+label: r_packages
+  |                                                                              |..........................................................            |  83%
+label: install_terminal_tools
+:: Synchronizing package databases...
+ core is up to date
+ extra is up to date
+ community is up to date
+ multilib is up to date
+:: Starting full system upgrade...
+ there is nothing to do
+  |                                                                              |......................................................................| 100%
+  ordinary text without R code
+
+
+/usr/bin/pandoc +RTS -K512m -RTS 01_dependencies.utf8.md --to gfm --from markdown+autolink_bare_uris+tex_math_single_backslash --output 01_dependencies.md --standalone --table-of-contents --toc-depth 3 --template /home/jek/R/x86_64-pc-linux-gnu-library/4.0/rmarkdown/rmarkdown/templates/github_document/resources/default.md 
+/usr/bin/pandoc +RTS -K512m -RTS 01_dependencies.md --to html4 --from gfm --output 01_dependencies.html --standalone --self-contained --highlight-style pygments --template /home/jek/R/x86_64-pc-linux-gnu-library/4.0/rmarkdown/rmarkdown/templates/github_document/resources/preview.html --variable 'github-markdown-css:/home/jek/R/x86_64-pc-linux-gnu-library/4.0/rmarkdown/rmarkdown/templates/github_document/resources/github.css' --email-obfuscation none --metadata pagetitle=PREVIEW 
+Rscript -e 'rmarkdown::render("02_deploy.R")'
+  |                                                                              |                                                                      |   0%  |                                                                              |.....                                                                 |   7%
+   inline R code fragments
+
+  |                                                                              |.........                                                             |  13%
+label: setup
+  |                                                                              |..............                                                        |  20%
+  ordinary text without R code
+
+  |                                                                              |...................                                                   |  27%
+label: git
+  |                                                                              |.......................                                               |  33%
+  ordinary text without R code
+
+  |                                                                              |............................                                          |  40%
+label: rprofile
+  |                                                                              |.................................                                     |  47%
+  ordinary text without R code
+
+  |                                                                              |.....................................                                 |  53%
+label: renviron
+  |                                                                              |..........................................                            |  60%
+  ordinary text without R code
+
+  |                                                                              |...............................................                       |  67%
+label: bash
+  |                                                                              |...................................................                   |  73%
+  ordinary text without R code
+
+  |                                                                              |........................................................              |  80%
+label: xterm
+  |                                                                              |.............................................................         |  87%
+  ordinary text without R code
+
+  |                                                                              |.................................................................     |  93%
+label: vim
+[?1049h[22;0;0t[>4;2m[?1h=[?2004h[1;72r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[72;1H[?2004l[23;2t[23;1t[?2004l[?1l>[>4;m[?1049l[23;0;0t[?1049h[22;0;0t[>4;2m[?1h=[?2004h[1;72r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[72;1H[?2004l[23;2t[23;1t[?2004l[?1l>[>4;m[?1049l[23;0;0t[?1049h[22;0;0t[>4;2m[?1h=[?2004h[1;72r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[72;1H[?2004l[23;2t[23;1t[?2004l[?1l>[>4;m[?1049l[23;0;0t  |                                                                              |......................................................................| 100%
+  ordinary text without R code
+
+
+/usr/bin/pandoc +RTS -K512m -RTS 02_deploy.utf8.md --to gfm --from markdown+autolink_bare_uris+tex_math_single_backslash --output 02_deploy.md --standalone --table-of-contents --toc-depth 3 --template /home/jek/R/x86_64-pc-linux-gnu-library/4.0/rmarkdown/rmarkdown/templates/github_document/resources/default.md 
+/usr/bin/pandoc +RTS -K512m -RTS 02_deploy.md --to html4 --from gfm --output 02_deploy.html --standalone --self-contained --highlight-style pygments --template /home/jek/R/x86_64-pc-linux-gnu-library/4.0/rmarkdown/rmarkdown/templates/github_document/resources/preview.html --variable 'github-markdown-css:/home/jek/R/x86_64-pc-linux-gnu-library/4.0/rmarkdown/rmarkdown/templates/github_document/resources/github.css' --email-obfuscation none --metadata pagetitle=PREVIEW 
+make[1]: Leaving directory '/media/jeksterslab/scripts/r/build_jeksterslabRterm'
+Rscript r_packages.R
+Library path: /home/jek/R/x86_64-pc-linux-gnu-library/4.0 
+
+     checking for file ‘/tmp/RtmpD6aIJI/remotes642d1768be764/jeksterslabds-jeksterslabRpkg-2135967/DESCRIPTION’ ...  ✔  checking for file ‘/tmp/RtmpD6aIJI/remotes642d1768be764/jeksterslabds-jeksterslabRpkg-2135967/DESCRIPTION’
+  ─  preparing ‘jeksterslabRpkg’:
+     checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
+  ─  checking for LF line-endings in source and make files and shell scripts
+  ─  checking for empty or unneeded directories
+  ─  building ‘jeksterslabRpkg_0.9.0.tar.gz’
+     
+No man pages found in package  ‘jeksterslabRpkg’ 
+
+     checking for file ‘/tmp/RtmpD6aIJI/remotes642d1291e1ecb/jeksterslabds-jeksterslabRutils-8825ed6/DESCRIPTION’ ...  ✔  checking for file ‘/tmp/RtmpD6aIJI/remotes642d1291e1ecb/jeksterslabds-jeksterslabRutils-8825ed6/DESCRIPTION’
+  ─  preparing ‘jeksterslabRutils’:
+   checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
+  ─  checking for LF line-endings in source and make files and shell scripts
+  ─  checking for empty or unneeded directories
+  ─  building ‘jeksterslabRutils_0.9.0.tar.gz’
+     
+No man pages found in package  ‘jeksterslabRutils’ 
+
+     checking for file ‘/tmp/RtmpD6aIJI/remotes642d156b276be/jeksterslabds-jeksterslabRlib-dc8ac09/DESCRIPTION’ ...  ✔  checking for file ‘/tmp/RtmpD6aIJI/remotes642d156b276be/jeksterslabds-jeksterslabRlib-dc8ac09/DESCRIPTION’
+  ─  preparing ‘jeksterslabRlib’:
+     checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
+  ─  checking for LF line-endings in source and make files and shell scripts
+  ─  checking for empty or unneeded directories
+  ─  building ‘jeksterslabRlib_0.9.0.tar.gz’
+     
+No man pages found in package  ‘jeksterslabRlib’ 
+Rscript -e 'styler::style_dir()'
+Styling  158  files:
+ r_packages.R                                                         ✔ 
+ r_packages_orig.R                                                    ✔ 
+ build_boilerplatePackage/01_dependencies.R                           ✔ 
+ build_boilerplatePackage/02_create.R                                 ✔ 
+ build_boilerplatePackage/03_build.R                                  ✔ 
+ build_jeksterslabRterm/01_dependencies.R                             ✔ 
+ build_jeksterslabRterm/02_deploy.R                                   ✔ 
+ jeksterslabRdoc/R/doc_abstract.R                                     ✔ 
+ jeksterslabRdoc/R/doc_attributes.R                                   ✔ 
+ jeksterslabRdoc/R/doc_authorinfo.R                                   ✔ 
+ jeksterslabRdoc/R/doc_bib_latex.R                                    ✔ 
+ jeksterslabRdoc/R/doc_citation_adoc.R                                ✔ 
+ jeksterslabRdoc/R/doc_citation_latex.R                               ✔ 
+ jeksterslabRdoc/R/doc_doi2bib.R                                      ✔ 
+ jeksterslabRdoc/R/doc_knit.R                                         ✔ 
+ jeksterslabRdoc/R/doc_knit_adoc.R                                    ✔ 
+ jeksterslabRdoc/R/doc_knit_latex.R                                   ✔ 
+ jeksterslabRdoc/R/doc_manuscript.R                                   ✔ 
+ jeksterslabRdoc/R/doc_retag.R                                        ✔ 
+ jeksterslabRdoc/R/doc_retag_adoc.R                                   ✔ 
+ jeksterslabRdoc/R/doc_retag_latex.R                                  ✔ 
+ jeksterslabRdoc/R/doc_rm_tag.R                                       ✔ 
+ jeksterslabRdoc/inst/extdata/header.R                                ✔ 
+ jeksterslabRdoc/inst/extdata/new_tests.R                             ✔ 
+ jeksterslabRdoc/tests/testthat.R                                     ✔ 
+ jeksterslabRdoc/tests/testthat/test_2_plus_2.R                       ✔ 
+ jeksterslabRds/R/dat.R                                               ✔ 
+ jeksterslabRds/R/data_galton.R                                       ✔ 
+ jeksterslabRds/R/linreg.R                                            ✔ 
+ jeksterslabRds/R/z.R                                                 ✔ 
+ jeksterslabRds/data_raw/data_raw_galton.R                            ✔ 
+ jeksterslabRds/tests/testthat.R                                      ✔ 
+ jeksterslabRds/tests/testthat/test_dat_linreg_X_rnorm.R              ✔ 
+ jeksterslabRds/tests/testthat/test_linreg_inv.R                      ✔ 
+ jeksterslabRds/tests/testthat/test_z.R                               ✔ 
+ jeksterslabRlib/R/data_springer_books_available.R                    ✔ 
+ jeksterslabRlib/R/data_springer_books_doi.R                          ✔ 
+ jeksterslabRlib/R/lib_extract_isbn_crossref.R                        ✔ 
+ jeksterslabRlib/R/lib_isbn2googlebooksid.R                           ✔ 
+ jeksterslabRlib/R/lib_isbn2lccn.R                                    ✔ 
+ jeksterslabRlib/R/lib_metadata_calibre.R                             ✔ 
+ jeksterslabRlib/R/lib_metadata_crossref.R                            ✔ 
+ jeksterslabRlib/R/lib_metadata_lc.R                                  ✔ 
+ jeksterslabRlib/R/lib_metadata_openlib.R                             ✔ 
+ jeksterslabRlib/R/lib_remove_doi_http.R                              ✔ 
+ jeksterslabRlib/R/lib_remove_doi_prefix.R                            ✔ 
+ jeksterslabRlib/R/lib_remove_isbn_dashes.R                           ✔ 
+ jeksterslabRlib/R/lib_springer_calibredb_add.R                       ✔ 
+ jeksterslabRlib/R/lib_springer_download.R                            ✔ 
+ jeksterslabRlib/R/lib_springer_files.R                               ✔ 
+ jeksterslabRlib/R/lib_springer_link.R                                ✔ 
+ jeksterslabRlib/R/lib_wiley_doi2isbn.R                               ✔ 
+ jeksterslabRlib/data_raw/data_springer_books.R                       ✔ 
+ jeksterslabRlib/data_raw/metadata_springer_books.R                   ✔ 
+ jeksterslabRlib/data_raw/springer_books_download.R                   ✔ 
+ jeksterslabRlib/inst/extdata/data_springer_books.R                   ✔ 
+ jeksterslabRlib/inst/shiny/data_springer_books_available/server.R    ✔ 
+ jeksterslabRlib/inst/shiny/data_springer_books_available/ui.R        ✔ 
+ jeksterslabRlib/tests/testthat.R                                     ✔ 
+ jeksterslabRlib/tests/testthat/test_lib_extract_isbn_crossref.R      ✔ 
+ jeksterslabRlib/tests/testthat/test_lib_isbn2googlebooksid.R         ✔ 
+ jeksterslabRlib/tests/testthat/test_lib_metadata_crossref.R          ✔ 
+ jeksterslabRlib/tests/testthat/test_lib_metadata_lc.R                ✔ 
+ jeksterslabRlib/tests/testthat/test_lib_remove_doi_prefix.R          ✔ 
+ jeksterslabRnotes/R/data_galton.R                                    ✔ 
+ jeksterslabRnotes/R/z.R                                              ✔ 
+ jeksterslabRnotes/data_raw/data_raw_galton.R                         ✔ 
+ jeksterslabRnotes/tests/testthat.R                                   ✔ 
+ jeksterslabRnotes/tests/testthat/test_z.R                            ✔ 
+ jeksterslabRnotes/vignettes/articles/data_wrangling_list_to_df.R     ✔ 
+ jeksterslabRnotes/vignettes/articles/reporting_rscript_to_markdown.R ✔ 
+ jeksterslabRpkg/R/pkg_aliases.R                                      ✔ 
+ jeksterslabRpkg/R/pkg_appveyor.R                                     ✔ 
+ jeksterslabRpkg/R/pkg_build.R                                        ✔ 
+ jeksterslabRpkg/R/pkg_checkroot.R                                    ✔ 
+ jeksterslabRpkg/R/pkg_create.R                                       ✔ 
+ jeksterslabRpkg/R/pkg_data.R                                         ✔ 
+ jeksterslabRpkg/R/pkg_description.R                                  ✔ 
+ jeksterslabRpkg/R/pkg_description_yml.R                              ✔ 
+ jeksterslabRpkg/R/pkg_find_root.R                                    ✔ 
+ jeksterslabRpkg/R/pkg_getstarted.R                                   ✔ 
+ jeksterslabRpkg/R/pkg_git.R                                          ✔ 
+ jeksterslabRpkg/R/pkg_gitignore.R                                    ✔ 
+ jeksterslabRpkg/R/pkg_license.R                                      ✔ 
+ jeksterslabRpkg/R/pkg_namespace.R                                    ✔ 
+ jeksterslabRpkg/R/pkg_news.R                                         ✔ 
+ jeksterslabRpkg/R/pkg_pkgdown.R                                      ✔ 
+ jeksterslabRpkg/R/pkg_r.R                                            ✔ 
+ jeksterslabRpkg/R/pkg_rbuildignore.R                                 ✔ 
+ jeksterslabRpkg/R/pkg_rd.R                                           ✔ 
+ jeksterslabRpkg/R/pkg_readme.R                                       ✔ 
+ jeksterslabRpkg/R/pkg_render.R                                       ✔ 
+ jeksterslabRpkg/R/pkg_rproj.R                                        ✔ 
+ jeksterslabRpkg/R/pkg_test.R                                         ✔ 
+ jeksterslabRpkg/R/pkg_travis.R                                       ✔ 
+ jeksterslabRpkg/R/pkg_valid_name.R                                   ✔ 
+ jeksterslabRpkg/R/pkg_vignette.R                                     ✔ 
+ jeksterslabRpkg/R/util_lapply.R                                      ✔ 
+ jeksterslabRpkg/R/util_list2vector.R                                 ✔ 
+ jeksterslabRpkg/R/util_os.R                                          ✔ 
+ jeksterslabRpkg/R/util_render.R                                      ✔ 
+ jeksterslabRpkg/R/util_search.R                                      ✔ 
+ jeksterslabRpkg/R/util_style.R                                       ✔ 
+ jeksterslabRpkg/R/util_txt2file.R                                    ✔ 
+ jeksterslabRpkg/tests/testthat.R                                     ✔ 
+ jeksterslabRpkg/tests/testthat/test_2_plus_2.R                       ✔ 
+ jeksterslabRterm/R/term_bash.R                                       ✔ 
+ jeksterslabRterm/R/term_git_config.R                                 ✔ 
+ jeksterslabRterm/R/term_install.R                                    ✔ 
+ jeksterslabRterm/R/term_renviron.R                                   ✔ 
+ jeksterslabRterm/R/term_rprofile.R                                   ✔ 
+ jeksterslabRterm/R/term_user_lib.R                                   ✔ 
+ jeksterslabRterm/R/term_vim.R                                        ✔ 
+ jeksterslabRterm/R/term_xterm.R                                      ✔ 
+ jeksterslabRterm/R/util_os.R                                         ✔ 
+ jeksterslabRterm/R/util_txt2file.R                                   ✔ 
+ jeksterslabRterm/inst/extdata/Rextras/Rprofile.R                     ✔ 
+ jeksterslabRterm/tests/testthat.R                                    ✔ 
+ jeksterslabRterm/tests/testthat/test_term_bash.R                     ✔ 
+ jeksterslabRterm/tests/testthat/test_term_renviron.R                 ✔ 
+ jeksterslabRterm/tests/testthat/test_term_rprofile.R                 ✔ 
+ jeksterslabRterm/tests/testthat/test_term_user_lib.R                 ✔ 
+ jeksterslabRterm/tests/testthat/test_term_vim.R                      ✔ 
+ jeksterslabRutils/R/util_bind.R                                      ✔ 
+ jeksterslabRutils/R/util_cat_sys.R                                   ✔ 
+ jeksterslabRutils/R/util_check_file_type.R                           ✔ 
+ jeksterslabRutils/R/util_clean_tempdir.R                             ✔ 
+ jeksterslabRutils/R/util_get_numbers.R                               ✔ 
+ jeksterslabRutils/R/util_lapply.R                                    ✔ 
+ jeksterslabRutils/R/util_list2vector.R                               ✔ 
+ jeksterslabRutils/R/util_os.R                                        ✔ 
+ jeksterslabRutils/R/util_pkgload.R                                   ✔ 
+ jeksterslabRutils/R/util_rand_str.R                                  ✔ 
+ jeksterslabRutils/R/util_render.R                                    ✔ 
+ jeksterslabRutils/R/util_search.R                                    ✔ 
+ jeksterslabRutils/R/util_shiny.R                                     ✔ 
+ jeksterslabRutils/R/util_style.R                                     ✔ 
+ jeksterslabRutils/R/util_txt2file.R                                  ✔ 
+ jeksterslabRutils/R/util_url_exists.R                                ✔ 
+ jeksterslabRutils/R/util_valid_email.R                               ✔ 
+ jeksterslabRutils/R/util_wget.R                                      ✔ 
+ jeksterslabRutils/R/util_xml2list.R                                  ✔ 
+ jeksterslabRutils/tests/testthat.R                                   ✔ 
+ jeksterslabRutils/tests/testthat/test_util_bind.R                    ✔ 
+ jeksterslabRutils/tests/testthat/test_util_cat_sys.R                 ✔ 
+ jeksterslabRutils/tests/testthat/test_util_check_file_type.R         ✔ 
+ jeksterslabRutils/tests/testthat/test_util_get_numbers.R             ✔ 
+ jeksterslabRutils/tests/testthat/test_util_lapply.R                  ✔ 
+ jeksterslabRutils/tests/testthat/test_util_list2vector.R             ✔ 
+ jeksterslabRutils/tests/testthat/test_util_os.R                      ✔ 
+ jeksterslabRutils/tests/testthat/test_util_render.R                  ✔ 
+ jeksterslabRutils/tests/testthat/test_util_search.R                  ✔ 
+ jeksterslabRutils/tests/testthat/test_util_style.R                   ✔ 
+ jeksterslabRutils/tests/testthat/test_util_txt2file.R                ✔ 
+ jeksterslabRutils/tests/testthat/test_util_url_exists.R              ✔ 
+ jeksterslabRutils/tests/testthat/test_util_valid_email.R             ✔ 
+ jeksterslabRutils/tests/testthat/test_util_wget.R                    ✔ 
+ jeksterslabRutils/tests/testthat/test_util_xml2list.R                ✔ 
+────────────────────────────────────────────────────────────────────
+Status	Count	Legend 
+✔ 	158	File unchanged.
+ℹ 	0	File changed.
+✖ 	0	Styling threw an error.
+────────────────────────────────────────────────────────────────────
+git init
+Reinitialized existing Git repository in /media/jeksterslab/scripts/r/.git/
+git add -A

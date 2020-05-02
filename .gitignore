@@ -8,3 +8,5 @@ jeksterslabRpkg
 jeksterslabRterm
 jeksterslabRutils
 notes
+.stderr
+.stdout

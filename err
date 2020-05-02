@@ -1,0 +1,298 @@
+Added R_LIBS_USER to /home/jek/.Renviron 
+
+Loading required package: devtools
+Loading required package: usethis
+Loading required package: styler
+Loading required package: rmarkdown
+Using github PAT from envvar GITHUB_PAT
+Skipping install of 'colorout' from a github remote, the SHA1 (726d6811) has not changed since last install.
+  Use `force = TRUE` to force installation
+Downloading GitHub repo jeksterslabds/jeksterslabRterm@master
+Installing package into ‘/home/jek/R/x86_64-pc-linux-gnu-library/4.0’
+(as ‘lib’ is unspecified)
+* installing *source* package ‘jeksterslabRterm’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (jeksterslabRterm)
+sudo: timed out reading password
+
+
+processing file: 01_dependencies.spin.Rmd
+warning: neofetch-7.0.0-1 is up to date -- skipping
+warning: wget-1.20.3-2 is up to date -- skipping
+warning: git-2.26.2-1 is up to date -- skipping
+warning: bash-completion-2.10-1 is up to date -- skipping
+warning: xterm-355-1 is up to date -- skipping
+warning: ttf-liberation-2.1.0-1 is up to date -- skipping
+warning: tmux-3.1_a-1 is up to date -- skipping
+warning: gvim-8.2.0510-2 is up to date -- skipping
+output file: 01_dependencies.knit.md
+
+
+Preview created: 01_dependencies.html
+
+Output created: 01_dependencies.md
+
+
+processing file: 02_deploy.spin.Rmd
+Cloning into '/home/jek/.vim/pack/tpope/start/fugitive'...
+warning: redirecting to https://github.com/tpope/vim-fugitive.git/
+Vim: Warning: Output is not to a terminal
+Cloning into '/home/jek/.vim/pack/tpope/start/surround'...
+warning: redirecting to https://github.com/tpope/vim-surround.git/
+Vim: Warning: Output is not to a terminal
+Cloning into '/home/jek/.vim/pack/vendor/start/nerdtree'...
+Vim: Warning: Output is not to a terminal
+output file: 02_deploy.knit.md
+
+
+Preview created: 02_deploy.html
+
+Output created: 02_deploy.md
+Added R_LIBS_USER to /home/jek/.Renviron 
+
+Loading required package: devtools
+Loading required package: usethis
+Loading required package: styler
+Loading required package: rmarkdown
+Using github PAT from envvar GITHUB_PAT
+Skipping install of 'colorout' from a github remote, the SHA1 (726d6811) has not changed since last install.
+  Use `force = TRUE` to force installation
+Downloading GitHub repo jeksterslabds/jeksterslabRpkg@master
+Installing package into ‘/home/jek/R/x86_64-pc-linux-gnu-library/4.0’
+(as ‘lib’ is unspecified)
+* installing *source* package ‘jeksterslabRpkg’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (jeksterslabRpkg)
+Skipping install of 'jeksterslabRterm' from a github remote, the SHA1 (a12a1d87) has not changed since last install.
+  Use `force = TRUE` to force installation
+Skipping install of 'jeksterslabRutils' from a github remote, the SHA1 (06e6d85c) has not changed since last install.
+  Use `force = TRUE` to force installation
+Downloading GitHub repo jeksterslabds/jeksterslabRlib@master
+Installing package into ‘/home/jek/R/x86_64-pc-linux-gnu-library/4.0’
+(as ‘lib’ is unspecified)
+* installing *source* package ‘jeksterslabRlib’ ...
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (jeksterslabRlib)
+To github.com-jeksterslabds:jeksterslabds/jeksterslabRpkg.git
+   9b1467d..2135967  master -> master
+Building jeksterslabRterm
+Path: /media/jeksterslab/scripts/r/jeksterslabRterm
+
+Styling...
+
+Updating jeksterslabRterm documentation
+Loading jeksterslabRterm
+Loading jeksterslabRterm
+Rendering...
+
+
+
+processing file: README.Rmd
+output file: README.knit.md
+
+
+Preview created: README.html
+
+Output created: README.md
+
+
+processing file: test_term_renviron.spin.Rmd
+
+
+processing file: test_term_rprofile.spin.Rmd
+
+
+processing file: test_term_bash.spin.Rmd
+
+
+processing file: test_term_user_lib.spin.Rmd
+
+
+processing file: test_term_vim.spin.Rmd
+output file: test_term_user_lib.knit.md
+
+Quitting from lines 60-67 (test_term_bash.spin.Rmd) 
+output file: test_term_vim.knit.md
+
+
+Preview created: test_term_user_lib.html
+
+Output created: test_term_user_lib.md
+
+Preview created: test_term_vim.html
+
+Output created: test_term_vim.md
+Updating jeksterslabRterm documentation
+Loading jeksterslabRterm
+Build process for jeksterslabRterm complete.
+
+Setting up `git` repository.
+
+Creating and pushing to a remote GiHub repository.
+
+Existing repository detected
+To github.com-jeksterslabds:jeksterslabds/jeksterslabRterm.git
+   a12a1d8..070b2a9  HEAD -> master
+To github.com-jeksterslabds:jeksterslabds/jeksterslabRutils.git
+   06e6d85..8825ed6  master -> master
+To github.com-jeksterslabds:jeksterslabds/jeksterslabRlib.git
+   9d58b3f..dc8ac09  master -> master
+To github.com-jeksterslabds:jeksterslabds/jeksterslabRdoc.git
+   f78695a..189fb87  master -> master
+Already on 'master'
+fatal: pathspec '*' did not match any files
+make[1]: [Makefile:20: clean] Error 128 (ignored)
+Added R_LIBS_USER to /home/jek/.Renviron 
+
+Loading required package: devtools
+Loading required package: usethis
+Loading required package: styler
+Loading required package: rmarkdown
+Using github PAT from envvar GITHUB_PAT
+Skipping install of 'colorout' from a github remote, the SHA1 (726d6811) has not changed since last install.
+  Use `force = TRUE` to force installation
+Downloading GitHub repo jeksterslabds/jeksterslabRterm@master
+Installing package into ‘/home/jek/R/x86_64-pc-linux-gnu-library/4.0’
+(as ‘lib’ is unspecified)
+* installing *source* package ‘jeksterslabRterm’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (jeksterslabRterm)
+warning: neofetch-7.0.0-1 is up to date -- skipping
+warning: wget-1.20.3-2 is up to date -- skipping
+warning: git-2.26.2-1 is up to date -- skipping
+warning: bash-completion-2.10-1 is up to date -- skipping
+warning: xterm-355-1 is up to date -- skipping
+warning: ttf-liberation-2.1.0-1 is up to date -- skipping
+warning: tmux-3.1_a-1 is up to date -- skipping
+warning: gvim-8.2.0510-2 is up to date -- skipping
+
+
+processing file: 01_dependencies.spin.Rmd
+warning: neofetch-7.0.0-1 is up to date -- skipping
+warning: wget-1.20.3-2 is up to date -- skipping
+warning: git-2.26.2-1 is up to date -- skipping
+warning: bash-completion-2.10-1 is up to date -- skipping
+warning: xterm-355-1 is up to date -- skipping
+warning: ttf-liberation-2.1.0-1 is up to date -- skipping
+warning: tmux-3.1_a-1 is up to date -- skipping
+warning: gvim-8.2.0510-2 is up to date -- skipping
+output file: 01_dependencies.knit.md
+
+
+Preview created: 01_dependencies.html
+
+Output created: 01_dependencies.md
+
+
+processing file: 02_deploy.spin.Rmd
+Cloning into '/home/jek/.vim/pack/tpope/start/fugitive'...
+warning: redirecting to https://github.com/tpope/vim-fugitive.git/
+Vim: Warning: Output is not to a terminal
+Cloning into '/home/jek/.vim/pack/tpope/start/surround'...
+warning: redirecting to https://github.com/tpope/vim-surround.git/
+Vim: Warning: Output is not to a terminal
+Cloning into '/home/jek/.vim/pack/vendor/start/nerdtree'...
+Vim: Warning: Output is not to a terminal
+output file: 02_deploy.knit.md
+
+
+Preview created: 02_deploy.html
+
+Output created: 02_deploy.md
+Added R_LIBS_USER to /home/jek/.Renviron 
+
+Loading required package: devtools
+Loading required package: usethis
+Loading required package: styler
+Loading required package: rmarkdown
+Using github PAT from envvar GITHUB_PAT
+Skipping install of 'colorout' from a github remote, the SHA1 (726d6811) has not changed since last install.
+  Use `force = TRUE` to force installation
+Downloading GitHub repo jeksterslabds/jeksterslabRpkg@master
+Installing package into ‘/home/jek/R/x86_64-pc-linux-gnu-library/4.0’
+(as ‘lib’ is unspecified)
+* installing *source* package ‘jeksterslabRpkg’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (jeksterslabRpkg)
+Skipping install of 'jeksterslabRterm' from a github remote, the SHA1 (070b2a95) has not changed since last install.
+  Use `force = TRUE` to force installation
+Downloading GitHub repo jeksterslabds/jeksterslabRutils@master
+Installing package into ‘/home/jek/R/x86_64-pc-linux-gnu-library/4.0’
+(as ‘lib’ is unspecified)
+* installing *source* package ‘jeksterslabRutils’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (jeksterslabRutils)
+Downloading GitHub repo jeksterslabds/jeksterslabRlib@master
+Installing package into ‘/home/jek/R/x86_64-pc-linux-gnu-library/4.0’
+(as ‘lib’ is unspecified)
+* installing *source* package ‘jeksterslabRlib’ ...
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (jeksterslabRlib)
