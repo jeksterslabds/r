@@ -12,6 +12,7 @@ all :
 	(cd jeksterslabRterm && make)
 	(cd jeksterslabRutils && make)
 	(cd jeksterslabRlib && make)
+	(cd jeksterslabRdoc && make)
 	(cd build_boilerplatePackage && make)
 
 clean :
@@ -22,6 +23,7 @@ clean :
 	-(cd jeksterslabRterm && make)
 	-(cd jeksterslabRutils && make clean)
 	-(cd jeksterslabRlib && make clean)
+	-(cd jeksterslabRdoc && make clean)
 	-(cd build_boilerplatePackage && make clean)
 
 packages :
