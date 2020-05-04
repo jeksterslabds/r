@@ -1,34 +1,34 @@
-STDOUT="${HOME}/make.out"
-STDERR="${HOME}/make.err"
+PREFIX=/media/jeksterslab/scripts/r
+OUTPKG=$(PREFIX)/.stdoutpkg
+ERRPKG=$(PREFIX)/.stderrpkg
+OUTTRM=$(PREFIX)/.stdouttrm
+ERRTRM=$(PREFIX)/.stderrtrm
 
-.PHONY: all clean packages
+.PHONY: all clean boilerplate boilerplateclean packages packagesclean term termclean
 
-all :
-	(cd build_jeksterslabRterm && make)
-	Rscript r_packages.R
-	Rscript -e 'styler::style_dir()'
-	(cd jeksterslabRutils && make)
-	(cd jeksterslabRterm && make)
-	(cd jeksterslabRpkg && make)
-	(cd jeksterslabRds && make)
-	(cd jeksterslabRlib && make)
-	(cd jeksterslabRdoc && make)
+all : boilerplate
+	./run.sh all
+
+clean : boilerplateclean
+	./run.sh clean
+
+boilerplateclean : packagesclean
+	(cd build_boilerplatePackage && make clean)
+
+boilerplate: packages
 	(cd build_boilerplatePackage && make)
-	-git init
-	-git add -A
-	-git commit -m "BUILD."
-	-git push
 
-clean :
-	-(cd build_jeksterslabRterm && make clean)
-	-(cd jeksterslabRutils && make clean)
-	-(cd jeksterslabRterm && make)
-	-(cd jeksterslabRpkg && make clean)
-	-(cd jeksterslabRds && make)
-	-(cd jeksterslabRlib && make clean)
-	-(cd jeksterslabRdoc && make clean)
-	-(cd build_boilerplatePackage && make clean)
+packagesclean : termclean
+	Rscript r_packages.R > ${OUTPKG} 2> ${ERRPKG}
+	Rscript -e 'styler::style_dir()' >> ${OUTPKG} 2>> ${ERRPKG}
 
-packages :
-	(cd build_jeksterslabRterm && make)
-	Rscript r_packages.R
+packages : term
+	Rscript r_packages.R > ${OUTPKG} 2> ${ERRPKG}
+	Rscript -e 'styler::style_dir()' >> ${OUTPKG} 2>> ${ERRPKG}
+
+term :
+	(cd build_jeksterslabRterm && make > ${OUTTRM} 2> ${ERRTRM})
+
+termclean :
+	(cd build_jeksterslabRterm && make clean > ${OUTTRM} 2> ${ERRTRM})
+
