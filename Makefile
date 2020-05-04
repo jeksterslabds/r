@@ -4,12 +4,15 @@ ERRPKG=$(PREFIX)/.stderrpkg
 OUTTRM=$(PREFIX)/.stdouttrm
 ERRTRM=$(PREFIX)/.stderrtrm
 
-.PHONY: all clean boilerplate boilerplateclean packages packagesclean term termclean
+.PHONY: all clean deepclean boilerplate boilerplateclean packages packagesclean term termclean
 
 all : boilerplate
 	./run.sh all
 
-clean : boilerplateclean
+clean : packages
+	./run.sh clean
+
+deepclean : boilerplateclean
 	./run.sh clean
 
 boilerplateclean : packagesclean
