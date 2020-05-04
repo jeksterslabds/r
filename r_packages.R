@@ -39,6 +39,7 @@ remotes::install_github(
     "jeksterslabds/jeksterslabRpkg",
     "jeksterslabds/jeksterslabRterm",
     "jeksterslabds/jeksterslabRlib",
-    "jeksterslabds/jeksterslabRdoc"
+    "jeksterslabds/jeksterslabRdoc",
+    "jeksterslabds/jeksterslabRds"
   )
 )
