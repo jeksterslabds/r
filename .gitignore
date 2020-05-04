@@ -1,12 +1,3 @@
-build_boilerplatePackage
-build_jeksterslabRterm
-jeksterslabRdoc
-jeksterslabRds
-jeksterslabRlib
-jeksterslabRnotes
-jeksterslabRpkg
-jeksterslabRterm
-jeksterslabRutils
-notes
-.stderr
-.stdout
+build*
+jeksterslabR*
+.std*
