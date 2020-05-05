@@ -23,14 +23,15 @@ boilerplate: packages
 
 packagesclean : termclean
 	Rscript r_packages.R > ${OUTPKG} 2> ${ERRPKG}
-	Rscript -e 'styler::style_dir()' >> ${OUTPKG} 2>> ${ERRPKG}
+	Rscript -e 'jeksterslabRutils::util_style(dir = getwd(), recursive = TRUE, par = TRUE, ncores = NULL)'
 
 packages : term
 	Rscript r_packages.R > ${OUTPKG} 2> ${ERRPKG}
-	Rscript -e 'styler::style_dir()' >> ${OUTPKG} 2>> ${ERRPKG}
+	Rscript -e 'jeksterslabRutils::util_style(dir = getwd(), recursive = TRUE, par = TRUE, ncores = NULL)'
 
 term :
 	(cd build_jeksterslabRterm && make > ${OUTTRM} 2> ${ERRTRM})
 
 termclean :
 	(cd build_jeksterslabRterm && make clean > ${OUTTRM} 2> ${ERRTRM})
+
