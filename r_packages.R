@@ -33,14 +33,5 @@ if (!require("rmarkdown")) {
   )
 }
 remotes::install_github(
-  c(
-    "jalvesaq/colorout",
-    "jeksterslabds/jeksterslabRutils",
-    "jeksterslabds/jeksterslabRpkg",
-    "jeksterslabds/jeksterslabRterm",
-    "jeksterslabds/jeksterslabRlib",
-    "jeksterslabds/jeksterslabRdoc",
-    "jeksterslabds/jeksterslabRds",
-    "jeksterslabds/jeksterslabRnotes"
-  )
+  "jeksterslabds/jeksterslabR"
 )
