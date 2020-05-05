@@ -34,4 +34,3 @@ term :
 
 termclean :
 	(cd build_jeksterslabRterm && make clean > ${OUTTRM} 2> ${ERRTRM})
-
