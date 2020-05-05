@@ -6,5 +6,7 @@ r:
 os:
 - linux
 - osx
+install:
+- Rscript if (!require("devtools")) install.packages("devtools", repos = "https://cran.rstudio.org")
 script:
 - Rscript r_packages.R
