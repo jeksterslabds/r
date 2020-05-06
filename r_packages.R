@@ -35,3 +35,7 @@ if (!require("rmarkdown")) {
 remotes::install_github(
   "jeksterslabds/jeksterslabR"
 )
+os <- jeksterslabRutils::util_os()
+if (os == "osx" | os == "linux") {
+  "jalvesaq/colorout"
+}
