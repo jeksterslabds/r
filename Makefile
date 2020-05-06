@@ -13,6 +13,8 @@ stdouttermclean=$(PREFIX)/.stdouttermclean
 stderrtermclean=$(PREFIX)/.stderrtermclean
 stdoutboilerplateclean=$(PREFIX)/.stdoutboilerplateclean
 stderrboilerplateclean=$(PREFIX)/.stderrboilerplateclean
+stdoutR=$(PREFIX)/.stdoutR
+stderrR=$(PREFIX)/.stderrR
 stdoutRdoc=$(PREFIX)/.stdoutRdoc
 stderrRdoc=$(PREFIX)/.stderrRdoc
 stdoutRds=$(PREFIX)/.stdoutRds
@@ -32,15 +34,18 @@ stderrRutils=$(PREFIX)/.stderrRutils
 
 all : build
 
-build : boilerplate term Rdoc Rds Rlib Rnotes
+build : boilerplate R term Rdoc Rds Rlib Rnotes
 
-rbuild : Rterm Rdoc Rds Rlib Rnotes
+rbuild : R Rterm Rdoc Rds Rlib Rnotes
 
 boilerplate: Rpkg
 	(cd build_boilerplatePackage && make > ${stdoutboilerplate} 2> ${stderrboilerplate})
 
 term : Rterm
 	(cd build_jeksterslabRterm && make > ${stdoutterm} 2> ${stderrterm})
+
+R : Rpkg
+	(cd jeksterslabR && make > ${stdoutR} 2> ${stderrR})
 
 Rdoc : Rpkg
 	(cd jeksterslabRdoc && make > ${stdoutRdoc} 2> ${stderrRdoc})
