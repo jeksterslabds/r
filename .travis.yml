@@ -10,4 +10,5 @@ os:
 install:
 - Rscript -e 'if (!require("devtools")) install.packages("devtools", repos = "https://cran.rstudio.org")'
 script:
-- Rscript r_packages.R
+- Rscript 01_user_lib .R
+- Rscript 02_r_packages.R
