@@ -4,7 +4,7 @@ ERRPKG=$(PREFIX)/.stderrpkg
 OUTTRM=$(PREFIX)/.stdouttrm
 ERRTRM=$(PREFIX)/.stderrtrm
 
-.PHONY: all build clean deepclean boilerplate boilerplateclean packages packagesclean term termclean
+.PHONY: all build clean deepclean boilerplate boilerplateclean packages packagesclean term termclean style
 
 all : build
 	Rscript r_packages.R > ${OUTPKG} 2> ${ERRPKG}
@@ -29,9 +29,8 @@ packagesclean : termclean
 	Rscript r_packages.R > ${OUTPKG} 2> ${ERRPKG}
 	Rscript -e 'jeksterslabRutils::util_style(dir = getwd(), recursive = TRUE, par = TRUE, ncores = NULL)'
 
-packages : term
+packages : term style
 	Rscript r_packages.R > ${OUTPKG} 2> ${ERRPKG}
-	Rscript -e 'jeksterslabRutils::util_style(dir = getwd(), recursive = TRUE, par = TRUE, ncores = NULL)'
 
 term :
 	(cd build_jeksterslabRterm && make > ${OUTTRM} 2> ${ERRTRM})
@@ -39,3 +38,6 @@ term :
 termclean :
 	(cd build_jeksterslabRterm && make clean > ${OUTTRM} 2> ${ERRTRM})
 
+style :
+	Rscript -e 'if (!require("styler")) install.packages("styler", repos = repos)'
+	Rscript -e 'jeksterslabRutils::util_style(dir = getwd(), recursive = TRUE, par = TRUE, ncores = NULL)'
