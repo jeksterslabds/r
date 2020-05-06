@@ -4,9 +4,12 @@ ERRPKG=$(PREFIX)/.stderrpkg
 OUTTRM=$(PREFIX)/.stdouttrm
 ERRTRM=$(PREFIX)/.stderrtrm
 
-.PHONY: all clean deepclean boilerplate boilerplateclean packages packagesclean term termclean
+.PHONY: all build clean deepclean boilerplate boilerplateclean packages packagesclean term termclean
 
-all : boilerplate
+all : build
+	Rscript r_packages.R > ${OUTPKG} 2> ${ERRPKG}
+
+build : boilerplate
 	./run.sh all
 
 clean : packages
@@ -19,6 +22,7 @@ boilerplateclean : packagesclean
 	(cd build_boilerplatePackage && make clean)
 
 boilerplate: packages
+	(cd jeksterslabRpkg && make)
 	(cd build_boilerplatePackage && make)
 
 packagesclean : termclean
