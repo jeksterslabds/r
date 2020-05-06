@@ -1,43 +1,90 @@
 PREFIX=/media/jeksterslab/scripts/r
-OUTPKG=$(PREFIX)/.stdoutpkg
-ERRPKG=$(PREFIX)/.stderrpkg
-OUTTRM=$(PREFIX)/.stdouttrm
-ERRTRM=$(PREFIX)/.stderrtrm
+stdoutboilerplate=$(PREFIX)/.stdoutboilerplate
+stderrboilerplate=$(PREFIX)/.stderrboilerplate
+stdoutterm=$(PREFIX)/.stdoutterm
+stderrterm=$(PREFIX)/.stderrterm
+stdoutstyle=$(PREFIX)/.stdoutstyle
+stderrstyle=$(PREFIX)/.stderrstyle
+stdoutpkg=$(PREFIX)/.stdoutpkg
+stderrpkg=$(PREFIX)/.stderrpkg
+stdoutuserlib=$(PREFIX)/.stdoutuserlib
+stderruserlib=$(PREFIX)/.stderruserlib
+stdouttermclean=$(PREFIX)/.stdouttermclean
+stderrtermclean=$(PREFIX)/.stderrtermclean
+stdoutboilerplateclean=$(PREFIX)/.stdoutboilerplateclean
+stderrboilerplateclean=$(PREFIX)/.stderrboilerplateclean
+stdoutRdoc=$(PREFIX)/.stdoutRdoc
+stderrRdoc=$(PREFIX)/.stderrRdoc
+stdoutRds=$(PREFIX)/.stdoutRds
+stderrRds=$(PREFIX)/.stderrRds
+stdoutRlib=$(PREFIX)/.stdoutRlib
+stderrRlib=$(PREFIX)/.stderrRlib
+stdoutRnotes=$(PREFIX)/.stdoutRnotes
+stderrRnotes=$(PREFIX)/.stderrRnotes
+stdoutRterm=$(PREFIX)/.stdoutRterm
+stderrRterm=$(PREFIX)/.stderrRterm
+stdoutRpkg=$(PREFIX)/.stdoutRpkg
+stderrRpkg=$(PREFIX)/.stderrRpkg
+stdoutRutils=$(PREFIX)/.stdoutRutils
+stderrRutils=$(PREFIX)/.stderrRutils
 
-.PHONY: all build clean deepclean boilerplate boilerplateclean packages packagesclean term termclean style
+.PHONY: all build rbuild boilerplate term Rdoc Rds Rlib Rnotes Rterm Rpkg Rutils style pkg userlib deepclean termclean clean boilerplateclean
 
 all : build
-	Rscript r_packages.R > ${OUTPKG} 2> ${ERRPKG}
 
-build : boilerplate
-	./run.sh all
+build : boilerplate term Rdoc Rds Rlib Rnotes
 
-clean : packages
-	./run.sh clean
+rbuild : Rterm Rdoc Rds Rlib Rnotes
 
-deepclean : boilerplateclean
-	./run.sh clean
+boilerplate: Rpkg
+	(cd build_boilerplatePackage && make > ${stdoutboilerplate} 2> ${stderrboilerplate})
 
-boilerplateclean : packagesclean
-	(cd build_boilerplatePackage && make clean)
+term : Rterm
+	(cd build_jeksterslabRterm && make > ${stdoutterm} 2> ${stderrterm})
 
-boilerplate: packages
-	(cd jeksterslabRpkg && make)
-	(cd build_boilerplatePackage && make)
+Rdoc : Rpkg
+	(cd jeksterslabRdoc && make > ${stdoutRdoc} 2> ${stderrRdoc})
 
-packagesclean : termclean
-	Rscript r_packages.R > ${OUTPKG} 2> ${ERRPKG}
-	Rscript -e 'jeksterslabRutils::util_style(dir = getwd(), recursive = TRUE, par = TRUE, ncores = NULL)'
+Rds : Rpkg
+	(cd jeksterslabRds && make > ${stdoutRds} 2> ${stderrRds})
 
-packages : term style
-	Rscript r_packages.R > ${OUTPKG} 2> ${ERRPKG}
+Rlib : Rpkg
+	(cd jeksterslabRlib && make > ${stdoutRlib} 2> ${stderrRlib})
 
-term :
-	(cd build_jeksterslabRterm && make > ${OUTTRM} 2> ${ERRTRM})
+Rnotes : Rpkg
+	(cd jeksterslabRnotes && make > ${stdoutRnotes} 2> ${stderrRnotes})
+
+Rterm : Rpkg
+	(cd jeksterslabRterm && make > ${stdoutRterm} 2> ${stderrRterm})
+
+Rpkg : Rutils
+	(cd jeksterslabRpkg && make > ${stdoutRpkg} 2> ${stderrRpkg})
+
+Rutils : pkg style
+	(cd jeksterslabRutils && make > ${stdoutRutils} 2> ${stderrRutils})
+
+style : userlib
+	Rscript -e 'if (!require("styler")) install.packages("styler", repos = "https://cran.rstudio.org")'
+	Rscript -e 'if (!require("remotes")) install.packages("remotes", repos = "https://cran.rstudio.org")'
+	Rscript -e 'if (!require("jeksterslabRutils")) remotes::install_github("jeksterslabds/jeksterslabRutils")'
+	Rscript -e 'jeksterslabRutils::util_style(dir = getwd(), recursive = TRUE, par = TRUE, ncores = NULL)' > ${stdoutstyle} 2> ${stderrstyle}
+
+pkg : userlib
+	Rscript 02_r_packages.R > ${stdoutpkg} 2> ${stderrpkg}
+
+userlib :
+	Rscript 01_user_lib.R > ${stdoutuserlib} 2> ${stderruserlib}
+
+deepclean : clean termclean
 
 termclean :
-	(cd build_jeksterslabRterm && make clean > ${OUTTRM} 2> ${ERRTRM})
+	(cd build_jeksterslabRterm && make clean > ${stdouttermclean} 2> ${stderrtermclean})
 
-style :
-	Rscript -e 'if (!require("styler")) install.packages("styler", repos = repos)'
-	Rscript -e 'jeksterslabRutils::util_style(dir = getwd(), recursive = TRUE, par = TRUE, ncores = NULL)'
+clean : boilerplateclean
+	- ./run.sh clean
+
+boilerplateclean :
+	(cd build_boilerplatePackage && make clean > ${stdoutboilerplateclean} 2> ${stderrboilerplateclean})
+
+rm :
+	- rm .std*
