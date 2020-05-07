@@ -30,9 +30,14 @@ stderrRpkg=$(PREFIX)/.stderrRpkg
 stdoutRutils=$(PREFIX)/.stdoutRutils
 stderrRutils=$(PREFIX)/.stderrRutils
 
-.PHONY: all build rbuild boilerplate term Rdoc Rds Rlib Rnotes Rterm Rpkg Rutils style pkg userlib deepclean termclean clean boilerplateclean
+.PHONY: all rgit build rbuild boilerplate term Rdoc Rds Rlib Rnotes Rterm Rpkg Rutils style pkg userlib deepclean termclean clean boilerplateclean
 
-all : build
+all : rgit
+
+rgit : build
+	- git add --all
+	- git commit -m "Automated build."
+	- git push
 
 build : boilerplate R term Rdoc Rds Rlib Rnotes
 
@@ -77,18 +82,18 @@ style : userlib
 pkg : userlib
 	Rscript 02_r_packages.R > ${stdoutpkg} 2> ${stderrpkg}
 
-userlib :
+userlib : rm
 	Rscript 01_user_lib.R > ${stdoutuserlib} 2> ${stderruserlib}
 
-deepclean : clean termclean
+deepclean : termclean
 
-termclean :
+termclean : clean
 	(cd build_jeksterslabRterm && make clean > ${stdouttermclean} 2> ${stderrtermclean})
 
 clean : boilerplateclean
 	- ./run.sh clean
 
-boilerplateclean :
+boilerplateclean : rm
 	(cd build_boilerplatePackage && make clean > ${stdoutboilerplateclean} 2> ${stderrboilerplateclean})
 
 rm :
