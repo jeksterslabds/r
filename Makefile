@@ -35,9 +35,9 @@ stderrRutils=$(PREFIX)/.stderrRutils
 all : rgit
 
 rgit : build
-	- git add --all
-	- git commit -m "Automated build."
-	- git push
+	-git add --all
+	-git commit -m "Automated build."
+	-git push
 
 build : boilerplate R term Rdoc Rds Rlib Rnotes
 
@@ -91,10 +91,10 @@ termclean : clean
 	(cd build_jeksterslabRterm && make clean > ${stdouttermclean} 2> ${stderrtermclean})
 
 clean : boilerplateclean
-	- ./run.sh clean
+	-./run.sh clean
 
 boilerplateclean : rm
 	(cd build_boilerplatePackage && make clean > ${stdoutboilerplateclean} 2> ${stderrboilerplateclean})
 
 rm :
-	- rm .std*
+	-rm .std*
