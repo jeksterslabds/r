@@ -7,6 +7,11 @@ r:
 os:
 - linux
 - osx
+jobs:
+  exclude:
+  # macOS binary packages not available for r-devel
+  - r: devel
+    os: osx
 install:
 - Rscript -e 'if (!require("devtools")) install.packages("devtools", repos = "https://cran.rstudio.org")'
 script:
