@@ -17,6 +17,8 @@ stdoutR=$(PREFIX)/.stdoutR
 stderrR=$(PREFIX)/.stderrR
 stdoutRlinreg=$(PREFIX)/.stdoutRlinreg
 stderrRlinreg=$(PREFIX)/.stderrRlinreg
+stdoutRdist=$(PREFIX)/.stdoutRdist
+stderrRdist=$(PREFIX)/.stderrRdist
 stdoutRdoc=$(PREFIX)/.stdoutRdoc
 stderrRdoc=$(PREFIX)/.stderrRdoc
 stdoutRds=$(PREFIX)/.stdoutRds
@@ -32,7 +34,7 @@ stderrRpkg=$(PREFIX)/.stderrRpkg
 stdoutRutils=$(PREFIX)/.stdoutRutils
 stderrRutils=$(PREFIX)/.stderrRutils
 
-.PHONY: all rgit build rbuild boilerplate term Rlinreg Rdoc Rds Rlib Rnotes Rterm Rpkg Rutils style pkg userlib deepclean termclean clean boilerplateclean
+.PHONY: all rgit build rbuild boilerplate term Rlinreg Rdist Rdoc Rds Rlib Rnotes Rterm Rpkg Rutils style pkg userlib deepclean termclean clean boilerplateclean
 
 all : rgit
 
@@ -41,9 +43,9 @@ rgit : build
 	-git commit -m "Automated build."
 	-git push
 
-build : boilerplate R term Rlinreg Rdoc Rds Rlib Rnotes
+build : boilerplate R term Rlinreg Rdist Rdoc Rds Rlib Rnotes
 
-rbuild : R Rterm Rlinreg Rdoc Rds Rlib Rnotes
+rbuild : R Rterm Rlinreg Rdist Rdoc Rds Rlib Rnotes
 
 boilerplate: Rpkg
 	(cd build_boilerplatePackage && make > ${stdoutboilerplate} 2> ${stderrboilerplate})
@@ -56,6 +58,9 @@ R : Rpkg
 
 Rlinreg : Rpkg
 	(cd jeksterslabRlinreg && make > ${stdoutRlinreg} 2> ${stderrRlinreg})
+
+Rdist : Rpkg
+	(cd jeksterslabRdist && make > ${stdoutRdist} 2> ${stderrRdist})
 
 Rdoc : Rpkg
 	(cd jeksterslabRdoc && make > ${stdoutRdoc} 2> ${stderrRdoc})
