@@ -53,10 +53,7 @@ rbuild : R Rterm Rmatrix Rlinreg Rsem Rdist Rdoc Rds Rlib Rnotes
 
 boilerplate: Rpkg
 	(cd build_boilerplatePackage && make > ${stdoutboilerplate} 2> ${stderrboilerplate})
-
-term : Rterm
-	(cd build_jeksterslabRterm && make > ${stdoutterm} 2> ${stderrterm})
-
+	
 R : Rpkg
 	(cd jeksterslabR && make > ${stdoutR} 2> ${stderrR})
 
@@ -84,11 +81,14 @@ Rnotes : Rpkg
 Rmatrix : Rpkg
 	(cd jeksterslabRmatrix && make > ${stdoutRmatrix} 2> ${stderrRmatrix})
 
-Rterm : Rpkg
-	(cd jeksterslabRterm && make > ${stdoutRterm} 2> ${stderrRterm})
-
-Rpkg : Rutils
+Rpkg : Rterm term
 	(cd jeksterslabRpkg && make > ${stdoutRpkg} 2> ${stderrRpkg})
+
+term : Rterm
+	(cd build_jeksterslabRterm && make > ${stdoutterm} 2> ${stderrterm})
+
+Rterm : Rutils
+	(cd jeksterslabRterm && make > ${stdoutRterm} 2> ${stderrRterm})
 
 Rutils : pkg style
 	(cd jeksterslabRutils && make > ${stdoutRutils} 2> ${stderrRutils})
