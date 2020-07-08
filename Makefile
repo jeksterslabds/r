@@ -21,6 +21,12 @@ stdoutRlinreg=$(PREFIX)/.stdoutRlinreg
 stderrRlinreg=$(PREFIX)/.stderrRlinreg
 stdoutRsem=$(PREFIX)/.stdoutRsem
 stderrRsem=$(PREFIX)/.stderrRsem
+stdoutRboot=$(PREFIX)/.stdoutRboot
+stderrRboot=$(PREFIX)/.stderrRboot
+stdoutRdata=$(PREFIX)/.stdoutRdata
+stderrRdata=$(PREFIX)/.stderrRdata
+stdoutRdatarepo=$(PREFIX)/.stdoutRdatarepo
+stderrRdatarepo=$(PREFIX)/.stderrRdatarepo
 stdoutRdist=$(PREFIX)/.stdoutRdist
 stderrRdist=$(PREFIX)/.stderrRdist
 stdoutRdoc=$(PREFIX)/.stdoutRdoc
@@ -38,7 +44,7 @@ stderrRpkg=$(PREFIX)/.stderrRpkg
 stdoutRutils=$(PREFIX)/.stdoutRutils
 stderrRutils=$(PREFIX)/.stderrRutils
 
-.PHONY: all rgit build rbuild boilerplate term Rmatrix Rlinreg Rsem Rdist Rdoc Rds Rlib Rnotes Rterm Rpkg Rutils style pkg userlib deepclean termclean clean boilerplateclean
+.PHONY: all rgit build rbuild boilerplate term Rmatrix Rlinreg Rsem Rboot Rdata Rdatarepo Rdist Rdoc Rds Rlib Rnotes Rterm Rpkg Rutils style pkg userlib deepclean termclean clean boilerplateclean
 
 all : rgit
 
@@ -47,15 +53,24 @@ rgit : build
 	-git commit -m "Automated build."
 	-git push
 
-build : boilerplate R term Rmatrix Rlinreg Rsem Rdist Rdoc Rds Rlib Rnotes
+build : boilerplate R term Rmatrix Rlinreg Rsem Rboot Rdata Rdatarepo Rdist Rdoc Rds Rlib Rnotes
 
-rbuild : R Rterm Rmatrix Rlinreg Rsem Rdist Rdoc Rds Rlib Rnotes
+rbuild : R Rterm Rmatrix Rlinreg Rsem Rboot Rdata Rdatarepo Rdist Rdoc Rds Rlib Rnotes
 
 boilerplate: Rpkg
 	(cd build_boilerplatePackage && make > ${stdoutboilerplate} 2> ${stderrboilerplate})
 	
 R : Rpkg
 	(cd jeksterslabR && make > ${stdoutR} 2> ${stderrR})
+
+Rdatarepo : Rpkg
+	(cd jeksterslabRdatarepo && make > ${stdoutRdatarepo} 2> ${stderrRdatarepo})
+
+Rdata : Rpkg
+	(cd jeksterslabRdata && make > ${stdoutRdata} 2> ${stderrRdata})
+
+Rboot : Rpkg
+	(cd jeksterslabRboot && make > ${stdoutRboot} 2> ${stderrRboot})
 
 Rsem : Rpkg
 	(cd jeksterslabRsem && make > ${stdoutRsem} 2> ${stderrRsem})

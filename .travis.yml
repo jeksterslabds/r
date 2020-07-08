@@ -12,17 +12,9 @@ jobs:
   # macOS binary packages not available for r-devel
   - r: devel
     os: osx
-addons:
-  apt:
-    update: true
-    packages:
-    - libmagick++-dev
-    - libpoppler-cpp-dev
-    - hub
 cache: packages
 before_install:
-- if [ "$TRAVIS_OS_NAME" = "osx" ]; then brew update && brew install imagemagick ghostscript hub; fi
-- Rscript -e 'if (!require("tinytex")) install.packages("tinytex"); tinytex::install_tinytex()'
+- Rscript -e 'if (!require("devtools")) install.packages("devtools", repos = "https://cran.rstudio.org")'
 install:
 - Rscript -e 'if (!require("devtools")) install.packages("devtools", repos = "https://cran.rstudio.org")'
 script:
